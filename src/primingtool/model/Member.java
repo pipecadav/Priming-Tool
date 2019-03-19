@@ -1,5 +1,9 @@
 package primingtool.model;
 
+/*
+ * Super class that stores the object member with all the variables a member import could contain.
+ * This class doesn't store any variables
+ */
 
 public class Member {
 
@@ -271,6 +275,10 @@ public class Member {
         this.bankAccountOwner = bankAccountOwner;
     }
 
+    /**
+     * Converts the object Data to a String
+     * @return
+     */
     @Override
     public String toString(){
             return

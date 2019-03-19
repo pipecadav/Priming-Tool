@@ -1,3 +1,4 @@
+import primingtool.dao.impl.MemberList;
 import primingtool.model.impl.EuropeMember;
 
 public class MainTest {
@@ -7,7 +8,7 @@ public class MainTest {
 
         String firstName = "test",
                 lastName = "test",
-                birthday = "test",
+                birthday = "08-10-2018/48/20.25",
                 clubmID = "test",
                 emai = "test",
                 phone = "test",
@@ -22,13 +23,13 @@ public class MainTest {
                 cardN = "test",
                 inactive = "test",
                 notes = "test",
-                unsubscribed = "test",
+                unsubscribed = "8-10-2018",
                 coachId = "test",
                 tags = "test",
                 bankAccount = "test",
                 bankAccountO = "test",
-                bic = "test",
-                sortCode = "test";
+                bic = "it's saved even if Casted",
+                sortCode = "This is also saved";
         char gender = 't';
 
 
@@ -38,6 +39,12 @@ public class MainTest {
         EuropeMember theMember;
         EuropeMember theMember2;
 
+        MemberList theList = new MemberList();
+
+
+
+
+
 
         theMember = new EuropeMember(firstName, lastName, birthday, gender, clubmID, emai, phone, cell,
                 street, extra, houseNumber, extrahouse, zip, city, country, cardN,
@@ -45,9 +52,19 @@ public class MainTest {
                 bankAccountO, bic, sortCode);
         theMember2 = new EuropeMember(bic, sortCode);
 
+        //theList.addMember(theMember);
 
-        System.out.println(theMember.toString());
-        System.out.println(theMember2.toString());
+        //theMember = (EuropeMember) theList.searchMember(clubmID);
+
+        //theMember.getBicCode();
+
+        //System.out.println(theMember.getBicCode());
+        //System.out.println(theMember2.toString());
+
+        String splitDate [] = birthday.split("[-/.]");
+
+
+
 
     }
 }

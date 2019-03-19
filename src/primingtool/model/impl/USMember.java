@@ -1,5 +1,13 @@
 package primingtool.model.impl;
 
+/* This class creates an object member with additional attributes that are only applicable to the USA
+ * It contains Bank Account Routing Number, Bank Account Type and Bank Account Place
+ * This class extends Member and therefore contains all its attributes
+ *
+ *
+ *
+ */
+
 import primingtool.model.Member;
 
 public class USMember extends Member {
@@ -45,6 +53,10 @@ public class USMember extends Member {
         this.bankAccountPlace = bankAccountPlace;
     }
 
+    /**
+     * Converts the object Data to a String
+     * @return
+     */
     @Override
     public String toString(){
         return

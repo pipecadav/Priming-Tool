@@ -70,7 +70,6 @@ public class PrimingTool extends Application{
 
     public  void loadimportData(File file){
 
-
     }
 
     /**

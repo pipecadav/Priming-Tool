@@ -2,6 +2,7 @@ package primingtool.view;
 
 import com.jfoenix.controls.JFXComboBox;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 public class MemberImportSettingsController extends Controller {
 
@@ -11,6 +12,7 @@ public class MemberImportSettingsController extends Controller {
 
     @FXML
     private JFXComboBox<String> regionSelection = new JFXComboBox<String>();
+
 
 
     /**
@@ -31,6 +33,9 @@ public class MemberImportSettingsController extends Controller {
     @FXML
     private void handleNextButton(){
         getPrimingTool().showUploader();
+        //System.out.println(regionSelection.getSelectionModel().getSelectedItem().toString());
+        //System.out.println(dateTypeSelection.getSelectionModel().getSelectedItem().toString());
+
 
     }
 
