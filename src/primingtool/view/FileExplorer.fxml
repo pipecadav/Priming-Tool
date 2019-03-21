@@ -7,8 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primingtool.view.fileexplorer.FileExplorerController">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primingtool.view.FileExplorerController">
    <children>
+      <ImageView fx:id="dragAndDrop" fitHeight="400.0" fitWidth="400.0" layoutX="200.0" layoutY="148.0" onDragDropped="#handleDrop" onDragOver="#handleDrag" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0">
+         <image>
+            <Image url="@img/drop_file.png" />
+         </image>
+      </ImageView>
       <JFXButton alignment="CENTER" focusTraversable="false" layoutX="154.0" layoutY="478.0" onAction="#handleBrowse" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #257eff; -fx-background-radius: 0;" text="... Or Browse the File Here" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -19,10 +24,5 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="200.0" layoutY="148.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0">
-         <image>
-            <Image url="@../img/drop_file.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

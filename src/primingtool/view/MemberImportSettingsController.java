@@ -1,8 +1,20 @@
+/*
+ * CONTROLLER OF THE MEMBER IMPORT SETTINGS PAGE
+ *
+ * This controller handles the view for the the Member Import Settings Page:
+ *  - Installs the tooltips for help
+ *  - Shows the Drop down Menus for Region and Date format with the options to choose from
+ *
+ */
+
 package primingtool.view;
 
 import com.jfoenix.controls.JFXComboBox;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import primingtool.business.impl.MemberRulesImpl;
 
 public class MemberImportSettingsController extends Controller {
 
@@ -13,6 +25,18 @@ public class MemberImportSettingsController extends Controller {
     @FXML
     private JFXComboBox<String> regionSelection = new JFXComboBox<String>();
 
+    @FXML
+    private Label selectFormatLabel;
+
+    @FXML
+    private Label selectRegionLabel;
+
+    @FXML
+    private Button nextButton;
+
+    private final ContextMenu contextMenuFormat = new ContextMenu();
+
+    private final ContextMenu contextMenuRegionLabel = new ContextMenu();
 
 
     /**
@@ -20,23 +44,47 @@ public class MemberImportSettingsController extends Controller {
      */
     public MemberImportSettingsController() {
 
+
     }
 
+    /**
+     * Initializes the view of the settings page and displays the drop down menus that have to be preselected
+     * before starting the import process
+     */
     @FXML
     private void  initialize(){
         dateTypeSelection.setItems(dateFormats);
         regionSelection.setItems(regions);
+        InstallContextMenu(
+                "Date format that was used in the original Import File",
+                selectFormatLabel,
+                contextMenuFormat
+        );
 
+        InstallContextMenu(
+                "Import format that was used depending on the region/market of the client",
+                selectRegionLabel,
+                contextMenuRegionLabel
+        );
     }
 
 
+    /**
+     * Takes the user to the next page and stores the Date Format and Region in the Member Rules*
+     */
     @FXML
     private void handleNextButton(){
         getPrimingTool().showUploader();
-        //System.out.println(regionSelection.getSelectionModel().getSelectedItem().toString());
-        //System.out.println(dateTypeSelection.getSelectionModel().getSelectedItem().toString());
+        MemberRulesImpl.setRegionSelected(regionSelection.getSelectionModel().getSelectedItem().toString());
+        MemberRulesImpl.setDateFormatSelected(dateTypeSelection.getSelectionModel().getSelectedItem().toString());
 
 
-    }
+        //Just for testing Purposes
+        System.out.println(MemberRulesImpl.getRegionSelected());
+        System.out.println(MemberRulesImpl.getDateFormatSelected());
+        }
+
+
+
 
 }

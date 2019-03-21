@@ -1,3 +1,4 @@
+import primingtool.business.impl.MemberRulesImpl;
 import primingtool.dao.impl.MemberList;
 import primingtool.model.impl.EuropeMember;
 
@@ -61,7 +62,10 @@ public class MainTest {
         //System.out.println(theMember.getBicCode());
         //System.out.println(theMember2.toString());
 
-        String splitDate [] = birthday.split("[-/.]");
+        //String splitDate [] = birthday.split("[-/.]");
+
+
+
 
 
 

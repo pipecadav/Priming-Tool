@@ -1,7 +1,7 @@
 package primingtool;
 
-import primingtool.view.fileexplorer.FileExplorerController;
-import primingtool.view.MainMenuController;
+import primingtool.view.*;
+import primingtool.view.FileExplorerController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,7 +9,6 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import primingtool.view.*;
 
 
 import java.awt.*;
@@ -68,21 +67,34 @@ public class PrimingTool extends Application{
         }
     }
 
-    public  void loadimportData(File file){
+/*
+    public void loadPage(String url, Controller controller){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PrimingTool.class.getResource(url));
+            AnchorPane anchorPane = (AnchorPane) loader.load();
 
+            mainMenu.setCenter(anchorPane);
+
+            controller = loader.getController();
+            controller.setController(this);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
+
+
+ */
 
     /**
      * Loads the member import settings when the Button is Clicked
      */
     public void showMemberImportSettings(){
         try{
-            //Loads the Import Settings
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PrimingTool.class.getResource("view/MemberImportSettings.fxml"));
             AnchorPane memberImportSettings = (AnchorPane) loader.load();
 
-            //Sets the Member Import Settings in the Center of the Layout
             mainMenu.setCenter(memberImportSettings);
 
             MemberImportSettingsController controller = loader.getController();
@@ -99,12 +111,10 @@ public class PrimingTool extends Application{
      */
     public void showContractImportSettings(){
         try{
-            //Loads the Contract Settings
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PrimingTool.class.getResource("view/ContractImportSettings.fxml"));
             AnchorPane contractImportSettings = (AnchorPane) loader.load();
 
-            //Sets the Member Import Settings in the Center of the Layout
             mainMenu.setCenter(contractImportSettings);
 
             ContractImportSettingsController controller = loader.getController();
@@ -121,12 +131,10 @@ public class PrimingTool extends Application{
      */
     public void showMembershipImportSettings(){
         try{
-            //Loads the Contract Settings
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PrimingTool.class.getResource("view/MembershipImportSettings.fxml"));
             AnchorPane membershipImportSettings = (AnchorPane) loader.load();
 
-            //Sets the Member Import Settings in the Center of the Layout
             mainMenu.setCenter(membershipImportSettings);
 
             MembershipImportSettingsController controller = loader.getController();
@@ -143,12 +151,10 @@ public class PrimingTool extends Application{
      */
     public void showCreditImportSettings(){
         try{
-            //Loads the Contract Settings
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PrimingTool.class.getResource("view/CreditImportSettings.fxml"));
             AnchorPane creditImportSettings = (AnchorPane) loader.load();
 
-            //Sets the Member Import Settings in the Center of the Layout
             mainMenu.setCenter(creditImportSettings);
 
             CreditImportSettingsController controller = loader.getController();
@@ -165,12 +171,10 @@ public class PrimingTool extends Application{
      */
     public void showProgressImportSettings(){
         try{
-            //Loads the Contract Settings
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(PrimingTool.class.getResource("view/ProgressImportSettings.fxml"));
             AnchorPane progressImportSettings = (AnchorPane) loader.load();
 
-            //Sets the Member Import Settings in the Center of the Layout
             mainMenu.setCenter(progressImportSettings);
 
             ProgressImportSettingsController controller = loader.getController();
@@ -187,15 +191,30 @@ public class PrimingTool extends Application{
      */
     public void showUploader(){
         try{
-            //Loads the Contract Settings
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(PrimingTool.class.getResource("view/FileExplorer/FileExplorer.fxml"));
+            loader.setLocation(PrimingTool.class.getResource("view/FileExplorer.fxml"));
             AnchorPane fileExplorer = (AnchorPane) loader.load();
 
-            //Sets the Member Import Settings in the Center of the Layout
             mainMenu.setCenter(fileExplorer);
 
             FileExplorerController controller = loader.getController();
+            controller.setController(this);
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void showStartPrimingPage(){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PrimingTool.class.getResource("view/StartPriming.fxml"));
+            AnchorPane startPrimingPage = (AnchorPane) loader.load();
+
+            mainMenu.setCenter(startPrimingPage);
+
+            StartPrimingController controller = loader.getController();
             controller.setController(this);
 
 

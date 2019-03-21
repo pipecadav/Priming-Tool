@@ -9,11 +9,14 @@ import java.util.regex.Pattern;
 
 public class MemberRulesImpl implements MemberBusinessRules {
 
-    private File originalImportFile;
+    private static File originalImportFile;
     private MemberList memberList;
+    private static String dateFormatSelected = "";
+    private static String regionSelected = "";
 
-    public MemberRulesImpl(File file){
-        this.originalImportFile = file;
+
+
+    public MemberRulesImpl(){
     }
 
     @Override
@@ -62,8 +65,6 @@ public class MemberRulesImpl implements MemberBusinessRules {
 
     @Override
     public String checkDateFormat(String dateformat, String date) {
-        String splitDate [] = date.split("[-/.]");
-
         switch(dateformat){
             case "dd-mm-yyyy":
                 return date.replaceAll("[-/.]","-");
@@ -93,7 +94,27 @@ public class MemberRulesImpl implements MemberBusinessRules {
         return value.trim();
     }
 
-    public String getOriginalImportFile() {
+    public static String getDateFormatSelected() {
+        return dateFormatSelected;
+    }
+
+    public static void setDateFormatSelected(String dateFormatSelected) {
+         MemberRulesImpl.dateFormatSelected = dateFormatSelected;
+    }
+
+    public static String getRegionSelected() {
+        return regionSelected;
+    }
+
+    public static void setRegionSelected(String regionSelected) {
+        MemberRulesImpl.regionSelected = regionSelected;
+    }
+
+    public static String getOriginalImportFile() {
         return originalImportFile.getAbsolutePath();
+    }
+
+    public static void setOriginalImportFile(File file){
+        MemberRulesImpl.originalImportFile = file;
     }
 }
