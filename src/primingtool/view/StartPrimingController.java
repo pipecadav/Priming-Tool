@@ -16,6 +16,7 @@ public class StartPrimingController extends Controller {
 
     @FXML
     private void handleStartButton(){
+        getPrimingTool().showFieldSelectionPage();
 
     }
 }

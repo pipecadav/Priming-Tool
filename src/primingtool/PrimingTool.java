@@ -1,5 +1,7 @@
 package primingtool;
 
+import javafx.scene.control.ScrollPane;
+import javafx.stage.Modality;
 import primingtool.view.*;
 import primingtool.view.FileExplorerController;
 import javafx.application.Application;
@@ -9,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import sun.plugin.javascript.navig.Anchor;
 
 
 import java.awt.*;
@@ -21,6 +24,7 @@ public class PrimingTool extends Application{
 
     private Stage primaryStage;
     private BorderPane mainMenu;
+    private AnchorPane selection;
 
     /**
      * Constructor
@@ -215,6 +219,25 @@ public class PrimingTool extends Application{
             mainMenu.setCenter(startPrimingPage);
 
             StartPrimingController controller = loader.getController();
+            controller.setController(this);
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void showFieldSelectionPage(){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PrimingTool.class.getResource("view/FieldSelection.fxml"));
+            ScrollPane fieldSelectionPage = loader.load();
+            fieldSelectionPage.setContent(FXMLLoader.load(getClass().getResource("view/CreditImportSettings.fxml")));
+
+
+            mainMenu.setCenter(fieldSelectionPage);
+
+            FieldSelectionController controller = loader.getController();
             controller.setController(this);
 
 
