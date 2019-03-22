@@ -19,12 +19,12 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URI;
+import java.net.URL;
 
 public class PrimingTool extends Application{
 
     private Stage primaryStage;
     private BorderPane mainMenu;
-    private AnchorPane selection;
 
     /**
      * Constructor
@@ -218,6 +218,7 @@ public class PrimingTool extends Application{
 
             mainMenu.setCenter(startPrimingPage);
 
+
             StartPrimingController controller = loader.getController();
             controller.setController(this);
 
@@ -229,15 +230,34 @@ public class PrimingTool extends Application{
 
     public void showFieldSelectionPage(){
         try{
+            URL url = PrimingTool.class.getResource("view/FieldSelection.fxml");
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(PrimingTool.class.getResource("view/FieldSelection.fxml"));
-            ScrollPane fieldSelectionPage = loader.load();
-            fieldSelectionPage.setContent(FXMLLoader.load(getClass().getResource("view/CreditImportSettings.fxml")));
+            loader.setLocation(url);
+            AnchorPane fieldSelection = loader.load();
+            //scrollPaneContainer.setContent(FXMLLoader.load(getClass().getResource("view/CreditImportSettings.fxml")));
+            ScrollPane scrollPaneContainer = new ScrollPane();
+            scrollPaneContainer.setContent(fieldSelection);
 
 
-            mainMenu.setCenter(fieldSelectionPage);
-
+            mainMenu.setCenter(scrollPaneContainer);
             FieldSelectionController controller = loader.getController();
+            controller.setController(this);
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void showProcessingPage(){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PrimingTool.class.getResource("view/ProcessingPage.fxml"));
+            AnchorPane processingPage = (AnchorPane) loader.load();
+
+            mainMenu.setCenter(processingPage);
+
+            ProcessingPageController controller = loader.getController();
             controller.setController(this);
 
 

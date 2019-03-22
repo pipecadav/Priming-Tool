@@ -1,5 +1,7 @@
 package primingtool.view;
 
+import javafx.fxml.FXML;
+
 public class FieldSelectionController extends Controller {
 
 
@@ -13,6 +15,11 @@ public class FieldSelectionController extends Controller {
 
     public void initialize(){
 
+    }
+
+    @FXML
+    private void handleDataMappingButton(){
+        getPrimingTool().showProcessingPage();
     }
 
 
