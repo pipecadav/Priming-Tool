@@ -49,11 +49,10 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <JFXButton onAction="#handleDataMappingButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #257eff; -fx-background-radius: 0;" text="Run" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="30" GridPane.valignment="BOTTOM">
+            <JFXButton onAction="#handleDataMappingButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #257eff; -fx-background-radius: 0;" text="Run" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="29" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="14.0" />
                </font>
@@ -113,17 +112,17 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Unsubscribe Date" GridPane.columnIndex="2" GridPane.rowIndex="17">
+            <Label text="Unsubscribe Date" GridPane.columnIndex="2" GridPane.rowIndex="19">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Inactive" GridPane.columnIndex="2" GridPane.rowIndex="16">
+            <Label text="Inactive" GridPane.columnIndex="2" GridPane.rowIndex="17">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Card Number" GridPane.columnIndex="2" GridPane.rowIndex="15">
+            <Label text="Card Number" GridPane.columnIndex="2" GridPane.rowIndex="16">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -143,77 +142,77 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="US Bank Account Type" GridPane.columnIndex="2" GridPane.rowIndex="25">
+            <Label text="US Bank Account Type" GridPane.columnIndex="2" GridPane.rowIndex="27">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="US Bank Routing Number" GridPane.columnIndex="2" GridPane.rowIndex="24">
+            <Label text="US Bank Routing Number" GridPane.columnIndex="2" GridPane.rowIndex="26">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank Sort Code" GridPane.columnIndex="2" GridPane.rowIndex="23">
+            <Label text="Bank Sort Code" GridPane.columnIndex="2" GridPane.rowIndex="25">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank BIC Code" GridPane.columnIndex="2" GridPane.rowIndex="22">
+            <Label text="Bank BIC Code" GridPane.columnIndex="2" GridPane.rowIndex="24">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank Account Owner" GridPane.columnIndex="2" GridPane.rowIndex="21">
+            <Label text="Bank Account Owner" GridPane.columnIndex="2" GridPane.rowIndex="23">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank Account Number" GridPane.columnIndex="2" GridPane.rowIndex="20">
+            <Label text="Bank Account Number" GridPane.columnIndex="2" GridPane.rowIndex="22">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Tags" GridPane.columnIndex="2" GridPane.rowIndex="19">
+            <Label text="Tags" GridPane.columnIndex="2" GridPane.rowIndex="21">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Coach Id" GridPane.columnIndex="2" GridPane.rowIndex="18">
+            <Label text="Coach Id" GridPane.columnIndex="2" GridPane.rowIndex="20">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="US Bank Account Place" GridPane.columnIndex="2" GridPane.rowIndex="26">
+            <Label text="US Bank Account Place" GridPane.columnIndex="2" GridPane.rowIndex="28">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="16" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="17" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="19" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="23" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="18" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="22" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="21" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="20" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="13" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="14" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="15" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-            <JFXComboBox focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="inactive" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="17" />
+            <JFXComboBox fx:id="unsubscribe" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="19" />
+            <JFXComboBox fx:id="tags" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="21" />
+            <JFXComboBox fx:id="us_bank_account_place" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="28" />
+            <JFXComboBox fx:id="us_bank_account_type" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="27" />
+            <JFXComboBox fx:id="us_bank_routing_number" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
+            <JFXComboBox fx:id="bank_sort_code" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
+            <JFXComboBox fx:id="coach_id" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="20" />
+            <JFXComboBox fx:id="bank_bic_code" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
+            <JFXComboBox fx:id="bank_account_owner" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="23" />
+            <JFXComboBox fx:id="bank_account_number" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="22" />
+            <JFXComboBox fx:id="house_number" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
+            <JFXComboBox fx:id="house_number_addition" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
+            <JFXComboBox fx:id="zip" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="13" />
+            <JFXComboBox fx:id="city" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="14" />
+            <JFXComboBox fx:id="card_nr" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="16" />
+            <JFXComboBox fx:id="street_extra" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+            <JFXComboBox fx:id="street" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <JFXComboBox fx:id="mobile" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+            <JFXComboBox fx:id="phone" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <JFXComboBox fx:id="email" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <JFXComboBox fx:id="club_member_id" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <JFXComboBox fx:id="gender" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <JFXComboBox fx:id="birthday" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <JFXComboBox fx:id="lastname" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <JFXComboBox fx:id="firstname" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
             <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="Data Mapping" GridPane.halignment="CENTER">
                <font>
                   <Font name="System Bold" size="24.0" />
@@ -249,22 +248,12 @@
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="15">
-               <image>
-                  <Image url="@img/arrow-right-bold.png" />
-               </image>
-            </ImageView>
             <ImageView GridPane.columnIndex="1" GridPane.rowIndex="16">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
             <ImageView GridPane.columnIndex="1" GridPane.rowIndex="17">
-               <image>
-                  <Image url="@img/arrow-right-bold.png" />
-               </image>
-            </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="18">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
@@ -309,6 +298,16 @@
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="27">
+               <image>
+                  <Image url="@img/arrow-right-bold.png" />
+               </image>
+            </ImageView>
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="28">
+               <image>
+                  <Image url="@img/arrow-right-bold.png" />
+               </image>
+            </ImageView>
             <ImageView GridPane.columnIndex="1" GridPane.rowIndex="14">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
@@ -349,6 +348,28 @@
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
+            <JFXComboBox fx:id="country" focusColor="#19232f" unFocusColor="#283643" GridPane.rowIndex="15" />
+            <JFXComboBox fx:id="notes" focusColor="#19232f" unFocusColor="#283643" GridPane.rowIndex="18" />
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="15">
+               <image>
+                  <Image url="@img/arrow-right-bold.png" />
+               </image>
+            </ImageView>
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="18">
+               <image>
+                  <Image url="@img/arrow-right-bold.png" />
+               </image>
+            </ImageView>
+            <Label text="Country" GridPane.columnIndex="2" GridPane.rowIndex="15">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Notes" GridPane.columnIndex="2" GridPane.rowIndex="18">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </GridPane>
    </children>

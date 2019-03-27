@@ -3,6 +3,12 @@ package primingtool.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import primingtool.business.CSVHandler;
+import sun.security.krb5.internal.crypto.Des;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 public class PrimingOverviewController extends Controller {
 
@@ -34,8 +40,9 @@ public class PrimingOverviewController extends Controller {
      */
     @FXML
     private void initialize(){
-
-
+        successfulRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()));
+        erroredRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()));
+        processedRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()+CSVHandler.getSuccessfulRecords()));
     }
 
     /**
@@ -43,7 +50,7 @@ public class PrimingOverviewController extends Controller {
      */
     @FXML
     private void handleOpenPrimedFile(){
-
+        openDesktop("Successful Imports");
     }
 
     /**
@@ -51,7 +58,18 @@ public class PrimingOverviewController extends Controller {
      */
     @FXML
     private void handleOpenErroredFile(){
+        openDesktop("Errored Imports");
 
+    }
+
+    private void openDesktop(String filepath){
+        File file = new File(filepath);
+        Desktop desktop = Desktop.getDesktop();
+        try{
+            desktop.open(file);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
 }

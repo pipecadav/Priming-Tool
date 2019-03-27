@@ -2,6 +2,7 @@ package primingtool.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import primingtool.business.CSVHandler;
 
 public class StartPrimingController extends Controller {
 
@@ -16,6 +17,7 @@ public class StartPrimingController extends Controller {
 
     @FXML
     private void handleStartButton(){
+        CSVHandler.setOriginalColumns();
         getPrimingTool().showFieldSelectionPage();
 
     }

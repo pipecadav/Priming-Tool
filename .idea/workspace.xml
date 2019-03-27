@@ -2,16 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="341fbc4e-3b8d-4353-a4d7-0eacd6aa576a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/primingtool/view/StyleSheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/primingtool/business/CSVHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/primingtool/dao/impl/EuropeMemberList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/primingtool/dao/impl/USMemberList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/primingtool/model/impl/EuropeErroredMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/primingtool/model/impl/USErroredMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/cadav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/cadav.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import_samples/sample1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/import_samples/sample1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/PrimingTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/PrimingTool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/business/MemberBusinessRules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/business/impl/MemberRulesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/business/impl/MemberRulesImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/dao/impl/ErroredMemberFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/dao/impl/MemberFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/dao/impl/MemberList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/dao/impl/MemberList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/model/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/model/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/model/impl/EuropeMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/model/impl/EuropeMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/model/impl/USMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/model/impl/USMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/FieldSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/FieldSelection.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/FieldSelectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/FieldSelectionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/FileExplorerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/FileExplorerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/MemberImportSettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/MemberImportSettings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/MemberImportSettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/MemberImportSettingsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/PrimingOverviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/PrimingOverviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/ProcessingPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/ProcessingPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/ScrollPaneContainer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/ScrollPaneContainerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/StartPrimingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Priming Tool/primingtool/view/StartPrimingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primingtool/PrimingTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/PrimingTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/business/MemberBusinessRules.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/business/impl/MemberRulesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/business/impl/MemberRulesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/dao/impl/ErroredMemberFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/dao/impl/MemberFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/dao/impl/MemberList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/dao/impl/MemberList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/model/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/model/impl/EuropeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/model/impl/EuropeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/model/impl/USMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/model/impl/USMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primingtool/view/FieldSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/FieldSelection.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primingtool/view/FieldSelectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/FieldSelectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/FileExplorerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/FileExplorerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/MemberImportSettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/MemberImportSettings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/MemberImportSettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/MemberImportSettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/PrimingOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/PrimingOverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/ProcessingPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/ProcessingPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primingtool/view/StartPrimingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primingtool/view/StartPrimingController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,71 +64,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/primingtool/view/FieldSelectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="223">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
               <folding>
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#323#324#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/primingtool/PrimingTool.java">
+        <entry file="file://$PROJECT_DIR$/src/primingtool/view/MemberImportSettingsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="237" column="62" selection-start-line="237" selection-start-column="62" selection-end-line="237" selection-end-column="62" />
+            <state relative-caret-position="223">
+              <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8438#8439#0" expanded="true" />
-                <element signature="e#8466#8467#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/primingtool/business/impl/MemberRulesImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/primingtool/business/CSVHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="189" column="66" lean-forward="true" selection-start-line="189" selection-start-column="66" selection-end-line="189" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2530#2531#0" expanded="true" />
-                <element signature="e#2565#2566#0" expanded="true" />
-                <element signature="e#2617#2618#0" expanded="true" />
-                <element signature="e#2658#2659#0" expanded="true" />
-                <element signature="e#2853#2854#0" expanded="true" />
-                <element signature="e#2890#2891#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/MemberFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/MemberList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#267#275#0" expanded="true" />
-                <element signature="e#355#363#0" expanded="true" />
+                <element signature="e#567#583#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#1036#1037#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+                <element signature="method#setOriginalColumns#0;class#CSVHandler#0" />
+                <element signature="e#1294#1537#0" />
+                <element signature="e#1557#1601#0" />
+                <element signature="e#1607#1608#0" expanded="true" />
+                <element signature="e#1645#1646#0" expanded="true" />
+                <element signature="e#1776#1777#0" expanded="true" />
+                <element signature="e#1807#1808#0" expanded="true" />
+                <element signature="e#1858#1859#0" expanded="true" />
+                <element signature="e#1904#1905#0" expanded="true" />
+                <element signature="method#setDate#0;class#CSVHandler#0" />
+                <element signature="method#getKey#0;class#CSVHandler#0" />
+                <element signature="e#3285#3286#0" expanded="true" />
+                <element signature="e#3325#3326#0" expanded="true" />
+                <element signature="e#3451#3452#0" expanded="true" />
+                <element signature="e#3515#3516#0" expanded="true" />
+                <element signature="e#3599#3600#0" expanded="true" />
+                <element signature="e#3636#3637#0" expanded="true" />
+                <element signature="e#3753#3754#0" expanded="true" />
+                <element signature="e#3811#3812#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,44 +139,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/importtool/view/Controller.java" />
-        <option value="$PROJECT_DIR$/src/importtool/view/FileExplorer/FileExplorerController.java" />
-        <option value="$PROJECT_DIR$/src/importtool/ImportTool.java" />
-        <option value="$PROJECT_DIR$/src/importtool/view/MainMenuController.java" />
-        <option value="$PROJECT_DIR$/src/importtool/view/MemberImportSettingsController.java" />
-        <option value="$PROJECT_DIR$/src/importtool/view/StageManager.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/Views.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/stagemanager/Views.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/stagemanager/Bundle.properties" />
         <option value="$PROJECT_DIR$/src/primingtool/ScrollPaneDemo.java" />
         <option value="$PROJECT_DIR$/src/primingtool/model/SuccessfulMember.java" />
         <option value="$PROJECT_DIR$/src/primingtool/model/impl/SuccessfulMember.java" />
         <option value="$PROJECT_DIR$/src/primingtool/model/ErroredMember.java" />
         <option value="$PROJECT_DIR$/src/primingtool/model/impl/OtherMember.java" />
         <option value="$PROJECT_DIR$/src/primingtool/model/impl/EUMember.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/model/impl/EuropeMember.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/model/Member.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/model/impl/USMember.java" />
         <option value="$PROJECT_DIR$/src/primingtool/dao/Member.java" />
         <option value="$PROJECT_DIR$/src/primingtool/dao/impl/ErroredMemberFile.java" />
         <option value="$PROJECT_DIR$/src/primingtool/dao/MemberDAO.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/dao/impl/MemberFile.java" />
         <option value="$PROJECT_DIR$/src/primingtool/business/MemberBsn.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/dao/impl/MemberList.java" />
         <option value="$PROJECT_DIR$/src/primingtool/business/MemberRules.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/business/MemberBusinessRules.java" />
         <option value="$PROJECT_DIR$/src/primingtool/control/Controller.java" />
-        <option value="$PROJECT_DIR$/src/MainTest.java" />
         <option value="$PROJECT_DIR$/src/primingtool/control/MemberImportSettingsController.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/business/impl/MemberRulesImpl.java" />
         <option value="$PROJECT_DIR$/src/primingtool/view/fileexplorer/FileExplorerController.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/MemberImportSettingsController.java" />
         <option value="$PROJECT_DIR$/src/primingtool/view/FXMLPages.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/FileExplorerController.java" />
         <option value="$PROJECT_DIR$/src/primingtool/view/ContractImportSettings.fxml" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/Controller.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/PrimingOverviewController.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/ProcessingPageController.java" />
         <option value="$PROJECT_DIR$/src/primingtool/view/PrimingOverview.fxml" />
         <option value="$PROJECT_DIR$/src/primingtool/view/ProcessingPage.fxml" />
         <option value="$PROJECT_DIR$/src/primingtool/view/FileExplorer.fxml" />
@@ -158,10 +164,32 @@
         <option value="$PROJECT_DIR$/src/primingtool/view/FieldSelection.fxml" />
         <option value="$PROJECT_DIR$/src/primingtool/view/AnchorPaneContainer.fxml" />
         <option value="$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainerController.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/FieldSelectionController.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/view/StyleSheet.css" />
+        <option value="$PROJECT_DIR$/src/primingtool/business/CSVCreator.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/model/EuropeErroredMember.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/business/CSVReader.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/view/FileExplorerController.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/business/CSVHAndler.java" />
         <option value="$PROJECT_DIR$/src/primingtool/view/StartPrimingController.java" />
         <option value="$PROJECT_DIR$/src/primingtool/PrimingTool.java" />
-        <option value="$PROJECT_DIR$/src/primingtool/view/StyleSheet.css" />
+        <option value="$PROJECT_DIR$/src/primingtool/view/ProcessingPageController.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/business/MemberBusinessRules.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/dao/impl/EuropeMemberList.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/dao/impl/USMemberList.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/view/Controller.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/model/Member.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/model/impl/USMember.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/model/impl/USErroredMember.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/model/impl/EuropeMember.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/model/impl/EuropeErroredMember.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/dao/impl/MemberFile.java" />
+        <option value="$PROJECT_DIR$/src/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/business/impl/MemberRulesImpl.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/dao/impl/MemberList.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/view/PrimingOverviewController.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/view/FieldSelectionController.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/view/MemberImportSettingsController.java" />
+        <option value="$PROJECT_DIR$/src/primingtool/business/CSVHandler.java" />
       </list>
     </option>
   </component>
@@ -173,9 +201,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="320" />
     <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="height" value="731" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -196,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,7 +235,7 @@
             <path>
               <item name="Priming Tool" type="b2602c69:ProjectViewProjectNode" />
               <item name="Priming Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="Errored Imports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Priming Tool" type="b2602c69:ProjectViewProjectNode" />
@@ -225,29 +254,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="primingtool" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Priming Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Priming Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="primingtool" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Priming Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Priming Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="primingtool" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Priming Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Priming Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="primingtool" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Priming Tool" type="b2602c69:ProjectViewProjectNode" />
@@ -256,17 +262,22 @@
               <item name="primingtool" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Priming Tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Priming Tool" type="462c0819:PsiDirectoryNode" />
+              <item name="Successful Imports" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553289474714" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553701765915" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -372,18 +383,24 @@
       <workItem from="1552952976339" duration="26485000" />
       <workItem from="1553099706781" duration="16591000" />
       <workItem from="1553189395636" duration="33577000" />
-      <workItem from="1553269888712" duration="11622000" />
+      <workItem from="1553269888712" duration="14585000" />
+      <workItem from="1553476509836" duration="145000" />
+      <workItem from="1553477016621" duration="705000" />
+      <workItem from="1553539762448" duration="20371000" />
+      <workItem from="1553609189084" duration="17887000" />
+      <workItem from="1553649142720" duration="6968000" />
+      <workItem from="1553680343024" duration="19298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171550000" />
+    <option name="totallyTimeSpent" value="239887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21375267" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22654584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -393,8 +410,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18851571" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34994584" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -414,133 +431,51 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22654584" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34994584" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/DataRegionSelection.fxml" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="300" column="34" selection-start-line="300" selection-start-column="34" selection-end-line="300" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ProgressImportSettings.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/stagemanager/Bundle.properties" />
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/stagemanager/Views.java" />
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/stagemanager/StageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/ScrollPaneDemo.java" />
     <entry file="file://$PROJECT_DIR$/src/primingtool/model/ErroredMember.java" />
     <entry file="file://$PROJECT_DIR$/src/primingtool/model/impl/OtherMember.java" />
-    <entry file="file://$PROJECT_DIR$/src/primingtool/model/impl/USMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/model/impl/EuropeMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/model/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="278" column="43" selection-start-line="278" selection-start-column="43" selection-end-line="278" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/filedrop/FileDrop.java" />
-    <entry file="file://$PROJECT_DIR$/src/primingtool/dao/MemberDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/ErroredMemberFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jfoenix-8.0.8.jar!/com/jfoenix/controls/JFXComboBox.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/business/MemberBusinessRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ContractImportSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/CreditImportSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MembershipImportSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -558,173 +493,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ProgressImportSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/view/FXMLPages.java" />
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#1378#1379#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/view/CreditImportSettings.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/view/ContractImportSettings.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/PrimingOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/view/ProcessingPage.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="240" selection-start-line="5" selection-start-column="240" selection-end-line="5" selection-end-column="240" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/view/MembershipImportSettings.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="87" lean-forward="true" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="87" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/view/StartPriming.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="171" selection-start-line="6" selection-start-column="171" selection-end-line="6" selection-end-column="171" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/PrimingOverview.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="171" lean-forward="true" selection-start-line="10" selection-start-column="164" selection-end-line="10" selection-end-column="171" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FileExplorer.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MemberImportSettings.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="171" selection-start-line="14" selection-start-column="171" selection-end-line="14" selection-end-column="171" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FieldSelection.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3247">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MemberImportSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/view/MainMenu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="173" selection-start-line="9" selection-start-column="141" selection-end-line="9" selection-end-column="173" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/StartPrimingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ProcessingPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FileExplorerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -735,73 +549,312 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainer.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/primingtool/dao/MemberDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FieldSelectionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/primingtool/PrimingTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="237" column="62" selection-start-line="237" selection-start-column="62" selection-end-line="237" selection-end-column="62" />
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8438#8439#0" expanded="true" />
-            <element signature="e#8466#8467#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainer.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ScrollPaneContainerController.java" />
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ProgressImportSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/CreditImportSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ContractImportSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MembershipImportSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/PrimingOverview.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="171" selection-start-line="10" selection-start-column="164" selection-end-line="10" selection-end-column="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MemberImportSettings.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/business/MemberBusinessRules.java" />
+    <entry file="file://$PROJECT_DIR$/src/primingtool/PrimingTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="255" selection-start-line="255" selection-end-line="255" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/ErroredMemberFile.java" />
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MainMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/ProcessingPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/StartPrimingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FieldSelection.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="205" column="43" selection-start-line="205" selection-start-column="32" selection-end-line="205" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/model/impl/USMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/model/impl/EuropeMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/model/impl/USErroredMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/model/impl/EuropeErroredMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/MemberFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="108">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FileExplorerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="29" column="109" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/EuropeMemberList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#222#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/USMemberList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FileExplorer.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Successful Imports/nullnull.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/dao/impl/MemberList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        <state relative-caret-position="240">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#267#275#0" expanded="true" />
-            <element signature="e#355#363#0" expanded="true" />
+            <element signature="method#deleteMember#0;class#MemberList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/PrimingOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primingtool/business/impl/MemberRulesImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+        <state relative-caret-position="184">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2530#2531#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2617#2618#0" expanded="true" />
-            <element signature="e#2658#2659#0" expanded="true" />
-            <element signature="e#2853#2854#0" expanded="true" />
-            <element signature="e#2890#2891#0" expanded="true" />
+            <element signature="method#findDuplicates#0;class#MemberRulesImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Errored Imports/Errorednullnull.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/FieldSelectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/view/MemberImportSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/primingtool/business/CSVHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="189" column="66" lean-forward="true" selection-start-line="189" selection-start-column="66" selection-end-line="189" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#567#583#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="method#setOriginalColumns#0;class#CSVHandler#0" />
+            <element signature="e#1294#1537#0" />
+            <element signature="e#1557#1601#0" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1807#1808#0" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="method#setDate#0;class#CSVHandler#0" />
+            <element signature="method#getKey#0;class#CSVHandler#0" />
+            <element signature="e#3285#3286#0" expanded="true" />
+            <element signature="e#3325#3326#0" expanded="true" />
+            <element signature="e#3451#3452#0" expanded="true" />
+            <element signature="e#3515#3516#0" expanded="true" />
+            <element signature="e#3599#3600#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
+            <element signature="e#3753#3754#0" expanded="true" />
+            <element signature="e#3811#3812#0" expanded="true" />
           </folding>
         </state>
       </provider>

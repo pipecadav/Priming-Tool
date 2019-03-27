@@ -14,6 +14,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import primingtool.business.CSVHandler;
 import primingtool.business.impl.MemberRulesImpl;
 
 public class MemberImportSettingsController extends Controller {
@@ -32,12 +34,19 @@ public class MemberImportSettingsController extends Controller {
     private Label selectRegionLabel;
 
     @FXML
+    private Label subdomainArea;
+
+    @FXML
     private Button nextButton;
+
+    @FXML
+    private TextField subdomainField;
 
     private final ContextMenu contextMenuFormat = new ContextMenu();
 
     private final ContextMenu contextMenuRegionLabel = new ContextMenu();
 
+    private final ContextMenu contextMenuSubdomain = new ContextMenu();
 
     /**
      * Constructor
@@ -66,6 +75,12 @@ public class MemberImportSettingsController extends Controller {
                 selectRegionLabel,
                 contextMenuRegionLabel
         );
+
+        InstallContextMenu(
+                "Club name or subdomain that is used in the portal URL",
+                subdomainArea,
+                contextMenuSubdomain
+        );
     }
 
 
@@ -77,11 +92,14 @@ public class MemberImportSettingsController extends Controller {
         getPrimingTool().showUploader();
         MemberRulesImpl.setRegionSelected(regionSelection.getSelectionModel().getSelectedItem().toString());
         MemberRulesImpl.setDateFormatSelected(dateTypeSelection.getSelectionModel().getSelectedItem().toString());
-
+        CSVHandler.setFileName(subdomainField.getText());
+        CSVHandler.setDate();
 
         //Just for testing Purposes
         System.out.println(MemberRulesImpl.getRegionSelected());
         System.out.println(MemberRulesImpl.getDateFormatSelected());
+        System.out.println(CSVHandler.getFileName());
+        System.out.println(CSVHandler.getDate());
         }
 
 

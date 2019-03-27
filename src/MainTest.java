@@ -42,24 +42,20 @@ public class MainTest {
 
         MemberList theList = new MemberList();
 
+        String values = "Abhishek,Mahapatra     ,,abhi_nist@yahoo.com,30/06/1984,m,3166280579,Cl 107A # 7C-49,110221,BOGOTA";
+        String [] splitValues = values.split(",");
+        System.out.println(splitValues[2] + "Empty");
 
 
 
-
-
-        theMember = new EuropeMember(firstName, lastName, birthday, gender, clubmID, emai, phone, cell,
-                street, extra, houseNumber, extrahouse, zip, city, country, cardN,
-                inactive, notes, unsubscribed, coachId, tags, bankAccount,
-                bankAccountO, bic, sortCode);
-        theMember2 = new EuropeMember(bic, sortCode);
 
         //theList.addMember(theMember);
 
         //theMember = (EuropeMember) theList.searchMember(clubmID);
 
-        //theMember.getBicCode();
+        //theMember.getBank_bic_code();
 
-        //System.out.println(theMember.getBicCode());
+        //System.out.println(theMember.getBank_bic_code());
         //System.out.println(theMember2.toString());
 
         //String splitDate [] = birthday.split("[-/.]");

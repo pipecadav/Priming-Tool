@@ -266,6 +266,23 @@ public class PrimingTool extends Application{
         }
     }
 
+    public void showOverviewPage(){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(PrimingTool.class.getResource("view/PrimingOverview.fxml"));
+            AnchorPane primingOverview = (AnchorPane) loader.load();
+
+            mainMenu.setCenter(primingOverview);
+
+            PrimingOverviewController controller = loader.getController();
+            controller.setController(this);
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
     public void showHelp() throws URISyntaxException, IOException{
         Desktop.getDesktop().browse(new URI("https://virtuagymdev.atlassian.net/wiki/spaces/API/pages/1048641651/Import+Tool"));
     }

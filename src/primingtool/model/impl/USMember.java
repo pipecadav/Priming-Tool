@@ -12,45 +12,72 @@ import primingtool.model.Member;
 
 public class USMember extends Member {
 
-    private String bankRoutingUS;
-    private String bankAccountType;
-    private String bankAccountPlace;
+    private String us_bank_routing_number = "";
+    private String us_bank_account_type = "";
+    private String us_bank_account_place = "";
 
-    public USMember(String bankRoutingUS, String bankAccountType, String bankAccountPlace) {
-        this.bankRoutingUS = bankRoutingUS;
-        this.bankAccountType = bankAccountType;
-        this.bankAccountPlace = bankAccountPlace;
+
+    public USMember() {
     }
 
-    public USMember(String firstName, String lastName, String birthday, char gender, String clubMemberId, String eMail, String phone, String mobile, String street, String streetExtra, String houseNumber, String houseNunberExtra, String zip, String city, String country, String cardNumber, String inactive, String notes, String unsubscribeDate, String coachId, String tags, String bankAccountNumber, String bankAccountOwner, String bankRoutingUS, String bankAccountType, String bankAccountPlace) {
-        super(firstName, lastName, birthday, gender, clubMemberId, eMail, phone, mobile, street, streetExtra, houseNumber, houseNunberExtra, zip, city, country, cardNumber, inactive, notes, unsubscribeDate, coachId, tags, bankAccountNumber, bankAccountOwner);
-        this.bankRoutingUS = bankRoutingUS;
-        this.bankAccountType = bankAccountType;
-        this.bankAccountPlace = bankAccountPlace;
+    /**
+     * Constructor
+     * @param firstname
+     * @param lastname
+     * @param birthday
+     * @param gender
+     * @param club_member_id
+     * @param email
+     * @param phone
+     * @param mobile
+     * @param street
+     * @param street_extra
+     * @param house_number
+     * @param house_number_addition
+     * @param zip
+     * @param city
+     * @param country
+     * @param card_nr
+     * @param inactive
+     * @param notes
+     * @param unsubscribe
+     * @param coach_id
+     * @param tags
+     * @param bank_account_number
+     * @param bank_account_owner
+     * @param us_bank_routing_number
+     * @param us_bank_account_type
+     * @param us_bank_account_place
+     */
+    public USMember(String firstname, String lastname, String birthday, String gender, String club_member_id, String email, String phone, String mobile, String street, String street_extra, String house_number, String house_number_addition, String zip, String city, String country, String card_nr, String inactive, String notes, String unsubscribe, String coach_id, String tags, String bank_account_number, String bank_account_owner, String us_bank_routing_number, String us_bank_account_type, String us_bank_account_place) {
+        super(firstname, lastname, birthday, gender, club_member_id, email, phone, mobile, street, street_extra, house_number, house_number_addition, zip, city, country, card_nr, inactive, notes, unsubscribe, coach_id, tags, bank_account_number, bank_account_owner);
+        this.us_bank_routing_number = us_bank_routing_number;
+        this.us_bank_account_type = us_bank_account_type;
+        this.us_bank_account_place = us_bank_account_place;
     }
 
-    public String getBankRoutingUS() {
-        return bankRoutingUS;
+    public String getUs_bank_routing_number() {
+        return us_bank_routing_number;
     }
 
-    public void setBankRoutingUS(String bankRoutingUS) {
-        this.bankRoutingUS = bankRoutingUS;
+    public void setUs_bank_routing_number(String us_bank_routing_number) {
+        this.us_bank_routing_number = us_bank_routing_number;
     }
 
-    public String getBankAccountType() {
-        return bankAccountType;
+    public String getUs_bank_account_type() {
+        return us_bank_account_type;
     }
 
-    public void setBankAccountType(String bankAccountType) {
-        this.bankAccountType = bankAccountType;
+    public void setUs_bank_account_type(String us_bank_account_type) {
+        this.us_bank_account_type = us_bank_account_type;
     }
 
-    public String getBankAccountPlace() {
-        return bankAccountPlace;
+    public String getUs_bank_account_place() {
+        return us_bank_account_place;
     }
 
-    public void setBankAccountPlace(String bankAccountPlace) {
-        this.bankAccountPlace = bankAccountPlace;
+    public void setUs_bank_account_place(String us_bank_account_place) {
+        this.us_bank_account_place = us_bank_account_place;
     }
 
     /**
@@ -61,8 +88,8 @@ public class USMember extends Member {
     public String toString(){
         return
                 super.toString() + "," +
-                this.getBankRoutingUS() + "," +
-                this.getBankAccountType() + "," +
-                this.getBankAccountPlace();
+                this.getUs_bank_routing_number() + "," +
+                this.getUs_bank_account_type() + "," +
+                this.getUs_bank_account_place();
     }
 }

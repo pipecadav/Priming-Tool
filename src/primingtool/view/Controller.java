@@ -8,6 +8,7 @@ import primingtool.PrimingTool;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+
 public class Controller {
 
     private PrimingTool primingTool;

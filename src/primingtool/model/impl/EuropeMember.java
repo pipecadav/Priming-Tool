@@ -11,67 +11,70 @@ import primingtool.model.Member;
 
 public class EuropeMember extends Member {
 
-    private String bicCode;
-    private String sortCode;
+    private String bank_bic_code = "";
+    private String bank_sort_code = "";
 
-    /**
-     * Constructor
-     * @param bicCode
-     * @param sortCode
-     */
-    public EuropeMember(String bicCode, String sortCode) {
-        this.bicCode = bicCode;
-        this.sortCode = sortCode;
+    public EuropeMember() {
     }
 
     /**
      * Constructor
-     * @param firstName
-     * @param lastName
+     * @param bank_bic_code
+     * @param bank_sort_code
+     */
+    public EuropeMember(String bank_bic_code, String bank_sort_code) {
+        this.bank_bic_code = bank_bic_code;
+        this.bank_sort_code = bank_sort_code;
+    }
+
+    /**
+     * Constructor
+     * @param firstname
+     * @param lastname
      * @param birthday
      * @param gender
-     * @param clubMemberId
-     * @param eMail
+     * @param club_member_id
+     * @param email
      * @param phone
      * @param mobile
      * @param street
-     * @param streetExtra
-     * @param houseNumber
-     * @param houseNunberExtra
+     * @param street_extra
+     * @param house_number
+     * @param house_number_addition
      * @param zip
      * @param city
      * @param country
-     * @param cardNumber
+     * @param card_nr
      * @param inactive
      * @param notes
-     * @param unsubscribeDate
-     * @param coachId
+     * @param unsubscribe
+     * @param coach_id
      * @param tags
-     * @param bankAccountNumber
-     * @param bankAccountOwner
-     * @param bicCode
-     * @param sortCode
+     * @param bank_account_number
+     * @param bank_account_owner
+     * @param bank_bic_code
+     * @param bank_sort_code
      */
-    public EuropeMember(String firstName, String lastName, String birthday, char gender, String clubMemberId, String eMail, String phone, String mobile, String street, String streetExtra, String houseNumber, String houseNunberExtra, String zip, String city, String country, String cardNumber, String inactive, String notes, String unsubscribeDate, String coachId, String tags, String bankAccountNumber, String bankAccountOwner, String bicCode, String sortCode) {
-        super(firstName, lastName, birthday, gender, clubMemberId, eMail, phone, mobile, street, streetExtra, houseNumber, houseNunberExtra, zip, city, country, cardNumber, inactive, notes, unsubscribeDate, coachId, tags, bankAccountNumber, bankAccountOwner);
-        this.bicCode = bicCode;
-        this.sortCode = sortCode;
+    public EuropeMember(String firstname, String lastname, String birthday, String gender, String club_member_id, String email, String phone, String mobile, String street, String street_extra, String house_number, String house_number_addition, String zip, String city, String country, String card_nr, String inactive, String notes, String unsubscribe, String coach_id, String tags, String bank_account_number, String bank_account_owner, String bank_bic_code, String bank_sort_code) {
+        super(firstname, lastname, birthday, gender, club_member_id, email, phone, mobile, street, street_extra, house_number, house_number_addition, zip, city, country, card_nr, inactive, notes, unsubscribe, coach_id, tags, bank_account_number, bank_account_owner);
+        this.bank_bic_code = bank_bic_code;
+        this.bank_sort_code = bank_sort_code;
     }
 
-    public String getBicCode() {
-        return bicCode;
+    public String getBank_bic_code() {
+        return bank_bic_code;
     }
 
-    public void setBicCode(String bicCode) {
-        this.bicCode = bicCode;
+    public void setBank_bic_code(String bank_bic_code) {
+        this.bank_bic_code = bank_bic_code;
     }
 
-    public String getSortCode() {
-        return sortCode;
+    public String getBank_sort_code() {
+        return bank_sort_code;
     }
 
-    public void setSortCode(String sortCode) {
-        this.sortCode = sortCode;
+    public void setBank_sort_code(String bank_sort_code) {
+        this.bank_sort_code = bank_sort_code;
     }
 
     /**
@@ -82,7 +85,7 @@ public class EuropeMember extends Member {
     public String toString() {
         return
                 super.toString() + "," +
-                this.getBicCode() + "," +
-                this.getSortCode();
+                this.getBank_bic_code() + "," +
+                this.getBank_sort_code();
     }
 }

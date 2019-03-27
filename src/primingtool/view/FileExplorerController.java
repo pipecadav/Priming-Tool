@@ -4,8 +4,7 @@ package primingtool.view;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.TransferMode;
-import primingtool.business.impl.MemberRulesImpl;
-import primingtool.view.Controller;
+import primingtool.business.CSVHandler;
 import javafx.fxml.FXML;
 import javafx.stage.FileChooser;
 
@@ -28,15 +27,15 @@ public class FileExplorerController extends Controller {
     private void handleBrowse(){
         FileChooser fileChooser = new FileChooser();
 
-        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Comma Separated Files (*.csv)", "*.csv");
+        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Comma Separated Values (*.csv)", "*.csv");
         fileChooser.getExtensionFilters().add(extensionFilter);
 
         File file = fileChooser.showOpenDialog(null);
         if (file != null){
-            MemberRulesImpl.setOriginalImportFile(file);
+            CSVHandler.setOriginalImportFile(file);
             getPrimingTool().showStartPrimingPage();
             //Just for testing Purposes
-            System.out.println(MemberRulesImpl.getOriginalImportFile());
+            System.out.println(CSVHandler.getOriginalImportFilePath());
         }
     }
 
@@ -53,10 +52,10 @@ public class FileExplorerController extends Controller {
         List <File> files = event.getDragboard().getFiles();
         if(!files.isEmpty()) {
             if(files.get(0).getAbsolutePath().endsWith(".csv")){
-                MemberRulesImpl.setOriginalImportFile(files.get(0));
+                CSVHandler.setOriginalImportFile(files.get(0));
                 getPrimingTool().showStartPrimingPage();
                 //Just for testing Purposes
-                System.out.println(MemberRulesImpl.getOriginalImportFile());
+                System.out.println(CSVHandler.getOriginalImportFilePath());
             }
         }
     }
