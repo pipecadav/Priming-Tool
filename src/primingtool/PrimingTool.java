@@ -1,7 +1,6 @@
 package primingtool;
 
 import javafx.scene.control.ScrollPane;
-import javafx.stage.Modality;
 import primingtool.view.*;
 import primingtool.view.FileExplorerController;
 import javafx.application.Application;
@@ -11,11 +10,10 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import sun.plugin.javascript.navig.Anchor;
+
 
 
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URI;
@@ -71,24 +69,6 @@ public class PrimingTool extends Application{
         }
     }
 
-/*
-    public void loadPage(String url, Controller controller){
-        try{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(PrimingTool.class.getResource(url));
-            AnchorPane anchorPane = (AnchorPane) loader.load();
-
-            mainMenu.setCenter(anchorPane);
-
-            controller = loader.getController();
-            controller.setController(this);
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-
- */
 
     /**
      * Loads the member import settings when the Button is Clicked
@@ -237,6 +217,8 @@ public class PrimingTool extends Application{
             //scrollPaneContainer.setContent(FXMLLoader.load(getClass().getResource("view/CreditImportSettings.fxml")));
             ScrollPane scrollPaneContainer = new ScrollPane();
             scrollPaneContainer.setContent(fieldSelection);
+            scrollPaneContainer.setPannable(true);
+
 
 
             mainMenu.setCenter(scrollPaneContainer);

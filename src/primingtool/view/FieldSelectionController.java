@@ -180,20 +180,18 @@ public class FieldSelectionController extends Controller {
     private void handleDataMappingButton(){
         setColumnOrder();
         memberList.createHeaders();
-        //System.out.println(CSVHandler.getColumnsIndex().keySet().toString());
-        //System.out.println(CSVHandler.getColumnsIndex().values().toString());
         memberList.readFileAndCreateMembers();
-        for (int i = 0; i<memberList.getMembers().size(); i++){
-            System.out.println(memberList.getMembers().get(i).toString());
-
-        }
+        //for (int i = 0; i<memberList.getMembers().size(); i++){
+        //    System.out.println(memberList.getMembers().get(i).toString());
+        //
+        //}
 
         CSVHandler.setOutputFilenames(CSVHandler.getDate(),CSVHandler.getFileName());
-        CSVHandler.setSuccessfulRecords(memberList.getMembers().size());
-        CSVHandler.setErroredRecords(memberList.getErroredMembers().size());
         CSVHandler.createFileDirectory();
         CSVHandler.createFile(CSVHandler.successfulFileNamePath, memberList.getMembers());
         CSVHandler.createFile(CSVHandler.erroredFileNamePath, memberList.getErroredMembers());
+        CSVHandler.setSuccessfulRecords(memberList.getMembers().size());
+        CSVHandler.setErroredRecords(memberList.getErroredMembers().size());
         getPrimingTool().showOverviewPage();
 
     }

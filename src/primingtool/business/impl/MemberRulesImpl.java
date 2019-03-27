@@ -132,8 +132,12 @@ public class MemberRulesImpl {
      * @return a single char reference to the gender m or f
      */
     public static String convertGenderToLowCase(String gender) {
-        char trimmedGender = gender.charAt(0);
-        return Character.toString(Character.toLowerCase(trimmedGender));
+        if(gender == ""){
+            return "";
+        }else{
+            char trimmedGender = gender.charAt(0);
+            return Character.toString(Character.toLowerCase(trimmedGender));
+        }
     }
 
     /**

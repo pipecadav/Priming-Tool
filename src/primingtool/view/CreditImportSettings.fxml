@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="787.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primingtool.view.CreditImportSettingsController">
+<AnchorPane prefHeight="787.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="primingtool.view.CreditImportSettingsController">
    <children>
       <JFXSpinner layoutX="275.0" layoutY="275.0" />
       <Label layoutX="171.0" layoutY="139.0" text="NOT YET IMPLEMENTED">

@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import primingtool.business.CSVHandler;
-import sun.security.krb5.internal.crypto.Des;
 
 import java.awt.*;
 import java.io.File;
@@ -41,8 +40,8 @@ public class PrimingOverviewController extends Controller {
     @FXML
     private void initialize(){
         successfulRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()));
-        erroredRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()));
-        processedRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()+CSVHandler.getSuccessfulRecords()));
+        erroredRecords.setText(Integer.toString(CSVHandler.getErroredRecords()));
+        processedRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()+CSVHandler.getErroredRecords()));
     }
 
     /**
@@ -62,6 +61,10 @@ public class PrimingOverviewController extends Controller {
 
     }
 
+    /**
+     * Initializes destop folder
+     * @param filepath
+     */
     private void openDesktop(String filepath){
         File file = new File(filepath);
         Desktop desktop = Desktop.getDesktop();

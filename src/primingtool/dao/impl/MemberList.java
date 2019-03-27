@@ -24,10 +24,9 @@ public class MemberList implements MemberDAO {
     public void readFileAndCreateMembers() {
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(CSVHandler.getOriginalImportFilePath()));
-            String memberRecord = bufferedReader.readLine();;
+            String memberRecord = bufferedReader.readLine();
             while((memberRecord = bufferedReader.readLine()) != null){
-                //addMember(convertRecordtoObject(memberRecord));
-                System.out.println(memberRecord);
+                addMember(convertRecordtoObject(memberRecord));
             }
         } catch (Exception e){
             e.printStackTrace();
