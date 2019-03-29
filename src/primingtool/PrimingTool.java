@@ -1,3 +1,10 @@
+/*
+ * The Priming Tool is an application made for the Client Success and Key Accounts Team
+ * It allows them to prepare and fix files faster so that they can do imports faster
+ *
+ *
+ */
+
 package primingtool;
 
 import javafx.scene.control.ScrollPane;
@@ -10,9 +17,6 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-
-
-
 import java.awt.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -45,7 +49,7 @@ public class PrimingTool extends Application{
     }
 
     /**
-     * Loads the main menu
+     * Loads the main menu which is also the parent screen
      */
     public void initMainMenu(){
         try{
@@ -70,8 +74,9 @@ public class PrimingTool extends Application{
     }
 
 
+
     /**
-     * Loads the member import settings when the Button is Clicked
+     * Loads the member import settings when the Member Import Button is clicked.
      */
     public void showMemberImportSettings(){
         try{

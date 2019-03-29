@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXComboBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import primingtool.business.CSVHandler;
 import primingtool.dao.impl.MemberList;
 
@@ -98,6 +99,16 @@ public class FieldSelectionController extends Controller {
     @FXML
     private JFXComboBox<String> us_bank_account_place = new JFXComboBox<String>();
 
+    @FXML
+    private Label firstnameRequired;
+
+    @FXML
+    private Label lastRequired;
+
+    @FXML
+    private Label clubMemberIdRequired;
+
+
 
 
 
@@ -178,23 +189,35 @@ public class FieldSelectionController extends Controller {
 
     @FXML
     private void handleDataMappingButton(){
-        setColumnOrder();
-        memberList.createHeaders();
-        memberList.readFileAndCreateMembers();
-        //for (int i = 0; i<memberList.getMembers().size(); i++){
-        //    System.out.println(memberList.getMembers().get(i).toString());
-        //
-        //}
+        if(firstname.getSelectionModel().getSelectedIndex() == -1){
+            firstnameRequired.setText("*");
+        }
+        if(lastname.getSelectionModel().getSelectedIndex() == -1){
+            lastRequired.setText("*");
+        }
+        if(club_member_id.getSelectionModel().getSelectedIndex() == -1){
+            clubMemberIdRequired.setText("*");
+        }
 
-        CSVHandler.setOutputFilenames(CSVHandler.getDate(),CSVHandler.getFileName());
-        CSVHandler.createFileDirectory();
-        CSVHandler.createFile(CSVHandler.successfulFileNamePath, memberList.getMembers());
-        CSVHandler.createFile(CSVHandler.erroredFileNamePath, memberList.getErroredMembers());
-        CSVHandler.setSuccessfulRecords(memberList.getMembers().size());
-        CSVHandler.setErroredRecords(memberList.getErroredMembers().size());
-        getPrimingTool().showOverviewPage();
+        if(firstname.getSelectionModel().getSelectedIndex() != -1){
+            if(lastname.getSelectionModel().getSelectedIndex() != -1){
+                if(club_member_id.getSelectionModel().getSelectedIndex() != -1){
+                    setColumnOrder();
+                    memberList.createHeaders();
+                    memberList.readFileAndCreateMembers();
+                    CSVHandler.setOutputFilenames(CSVHandler.getDate(),CSVHandler.getFileName());
+                    CSVHandler.createFileDirectory();
+                    CSVHandler.createFile(CSVHandler.successfulFileNamePath, memberList.getMembers());
+                    CSVHandler.createFile(CSVHandler.erroredFileNamePath, memberList.getErroredMembers());
+                    CSVHandler.setSuccessfulRecords(memberList.getMembers().size());
+                    CSVHandler.setErroredRecords(memberList.getErroredMembers().size());
+                    getPrimingTool().showOverviewPage();
 
-    }
+                }
+                }
+            }
+        }
+
 
 
 }

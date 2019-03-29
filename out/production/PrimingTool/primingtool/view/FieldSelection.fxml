@@ -8,19 +8,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1400.0" prefWidth="550.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="primingtool.view.FieldSelectionController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1167.0" prefWidth="570.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primingtool.view.FieldSelectionController">
    <children>
-      <GridPane layoutX="200.0" layoutY="35.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <GridPane layoutX="200.0" layoutY="120.0" prefHeight="1037.0" prefWidth="530.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="120.0">
         <columnConstraints>
-          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="187.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="227.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="96.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="227.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="187.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -52,183 +53,183 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <JFXButton onAction="#handleDataMappingButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #257eff; -fx-background-radius: 0;" text="Run" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="29" GridPane.valignment="BOTTOM">
+            <JFXButton onAction="#handleDataMappingButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #257eff; -fx-background-radius: 0;" text="Run" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="28" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <Label text="First Name" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label text="First Name">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Last Name" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label text="Last Name" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Birthday" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Label text="Birthday" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Gender" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Label text="Gender" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Club Member Id" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Label text="Club Member Id" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Email" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Label text="Email" GridPane.rowIndex="5">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Phone" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <Label text="Phone" GridPane.rowIndex="6">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Mobile" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <Label text="Mobile" GridPane.rowIndex="7">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Street" GridPane.columnIndex="2" GridPane.rowIndex="9">
+            <Label text="Street" GridPane.rowIndex="8">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Street Extra" GridPane.columnIndex="2" GridPane.rowIndex="10">
+            <Label text="Street Extra" GridPane.rowIndex="9">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="House Number" GridPane.columnIndex="2" GridPane.rowIndex="11">
+            <Label text="House Number" GridPane.rowIndex="10">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Unsubscribe Date" GridPane.columnIndex="2" GridPane.rowIndex="19">
+            <Label text="Unsubscribe Date" GridPane.rowIndex="18">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Inactive" GridPane.columnIndex="2" GridPane.rowIndex="17">
+            <Label text="Inactive" GridPane.rowIndex="16">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Card Number" GridPane.columnIndex="2" GridPane.rowIndex="16">
+            <Label text="Card Number" GridPane.rowIndex="15">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="City" GridPane.columnIndex="2" GridPane.rowIndex="14">
+            <Label text="City" GridPane.rowIndex="13">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="ZIP" GridPane.columnIndex="2" GridPane.rowIndex="13">
+            <Label text="ZIP" GridPane.rowIndex="12">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="House Number Add." GridPane.columnIndex="2" GridPane.rowIndex="12">
+            <Label text="House Number Add." GridPane.rowIndex="11">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="US Bank Account Type" GridPane.columnIndex="2" GridPane.rowIndex="27">
+            <Label text="US Bank Account Type" GridPane.rowIndex="26">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="US Bank Routing Number" GridPane.columnIndex="2" GridPane.rowIndex="26">
+            <Label text="US Bank Routing Number" GridPane.rowIndex="25">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank Sort Code" GridPane.columnIndex="2" GridPane.rowIndex="25">
+            <Label text="Bank Sort Code" GridPane.rowIndex="24">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank BIC Code" GridPane.columnIndex="2" GridPane.rowIndex="24">
+            <Label text="Bank BIC Code" GridPane.rowIndex="23">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank Account Owner" GridPane.columnIndex="2" GridPane.rowIndex="23">
+            <Label text="Bank Account Owner" GridPane.rowIndex="22">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Bank Account Number" GridPane.columnIndex="2" GridPane.rowIndex="22">
+            <Label text="Bank Account Number" GridPane.rowIndex="21">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Tags" GridPane.columnIndex="2" GridPane.rowIndex="21">
+            <Label text="Tags" GridPane.rowIndex="20">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Coach Id" GridPane.columnIndex="2" GridPane.rowIndex="20">
+            <Label text="Coach Id" GridPane.rowIndex="19">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="US Bank Account Place" GridPane.columnIndex="2" GridPane.rowIndex="28">
+            <Label text="US Bank Account Place" GridPane.rowIndex="27">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <JFXComboBox fx:id="inactive" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="17" />
-            <JFXComboBox fx:id="unsubscribe" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="19" />
-            <JFXComboBox fx:id="tags" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="21" />
-            <JFXComboBox fx:id="us_bank_account_place" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="28" />
-            <JFXComboBox fx:id="us_bank_account_type" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="27" />
-            <JFXComboBox fx:id="us_bank_routing_number" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
-            <JFXComboBox fx:id="bank_sort_code" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
-            <JFXComboBox fx:id="coach_id" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="20" />
-            <JFXComboBox fx:id="bank_bic_code" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
-            <JFXComboBox fx:id="bank_account_owner" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="23" />
-            <JFXComboBox fx:id="bank_account_number" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="22" />
-            <JFXComboBox fx:id="house_number" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
-            <JFXComboBox fx:id="house_number_addition" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
-            <JFXComboBox fx:id="zip" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="13" />
-            <JFXComboBox fx:id="city" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="14" />
-            <JFXComboBox fx:id="card_nr" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="16" />
-            <JFXComboBox fx:id="street_extra" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
-            <JFXComboBox fx:id="street" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
-            <JFXComboBox fx:id="mobile" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
-            <JFXComboBox fx:id="phone" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
-            <JFXComboBox fx:id="email" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
-            <JFXComboBox fx:id="club_member_id" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-            <JFXComboBox fx:id="gender" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-            <JFXComboBox fx:id="birthday" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-            <JFXComboBox fx:id="lastname" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-            <JFXComboBox fx:id="firstname" focusColor="#19232f" unFocusColor="#283643" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="Data Mapping" GridPane.halignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
+            <JFXComboBox fx:id="inactive" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="16" />
+            <JFXComboBox fx:id="unsubscribe" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="18" />
+            <JFXComboBox fx:id="tags" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="20" />
+            <JFXComboBox fx:id="us_bank_account_place" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="27" />
+            <JFXComboBox fx:id="us_bank_account_type" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="26" />
+            <JFXComboBox fx:id="us_bank_routing_number" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="25" />
+            <JFXComboBox fx:id="bank_sort_code" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="24" />
+            <JFXComboBox fx:id="coach_id" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="19" />
+            <JFXComboBox fx:id="bank_bic_code" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="23" />
+            <JFXComboBox fx:id="bank_account_owner" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="22" />
+            <JFXComboBox fx:id="bank_account_number" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="21" />
+            <JFXComboBox fx:id="house_number" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" />
+            <JFXComboBox fx:id="house_number_addition" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" />
+            <JFXComboBox fx:id="zip" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" />
+            <JFXComboBox fx:id="city" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" />
+            <JFXComboBox fx:id="card_nr" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="15" />
+            <JFXComboBox fx:id="street_extra" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
+            <JFXComboBox fx:id="street" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" />
+            <JFXComboBox fx:id="mobile" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
+            <JFXComboBox fx:id="phone" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+            <JFXComboBox fx:id="email" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+            <JFXComboBox fx:id="club_member_id" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+            <JFXComboBox fx:id="gender" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+            <JFXComboBox fx:id="birthday" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+            <JFXComboBox fx:id="lastname" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="firstname" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" />
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@img/arrow-right-bold.png" />
+               </image>
+            </ImageView>
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <image>
+                  <Image url="@img/arrow-right-bold.png" />
+               </image>
+            </ImageView>
             <ImageView GridPane.columnIndex="1" GridPane.rowIndex="8">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
             <ImageView GridPane.columnIndex="1" GridPane.rowIndex="10">
-               <image>
-                  <Image url="@img/arrow-right-bold.png" />
-               </image>
-            </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="9">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
@@ -243,7 +244,7 @@
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="13">
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="15">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
@@ -253,7 +254,7 @@
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="17">
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="18">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
@@ -303,17 +304,7 @@
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="28">
-               <image>
-                  <Image url="@img/arrow-right-bold.png" />
-               </image>
-            </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="14">
-               <image>
-                  <Image url="@img/arrow-right-bold.png" />
-               </image>
-            </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="13">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
@@ -348,29 +339,67 @@
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
-            <JFXComboBox fx:id="country" focusColor="#19232f" unFocusColor="#283643" GridPane.rowIndex="15" />
-            <JFXComboBox fx:id="notes" focusColor="#19232f" unFocusColor="#283643" GridPane.rowIndex="18" />
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="15">
+            <ImageView GridPane.columnIndex="1">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
-            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="18">
+            <JFXComboBox fx:id="country" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+            <JFXComboBox fx:id="notes" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="14">
                <image>
                   <Image url="@img/arrow-right-bold.png" />
                </image>
             </ImageView>
-            <Label text="Country" GridPane.columnIndex="2" GridPane.rowIndex="15">
+            <ImageView GridPane.columnIndex="1" GridPane.rowIndex="17">
+               <image>
+                  <Image url="@img/arrow-right-bold.png" />
+               </image>
+            </ImageView>
+            <Label text="Country" GridPane.rowIndex="14">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Notes" GridPane.columnIndex="2" GridPane.rowIndex="18">
+            <Label text="Notes" GridPane.rowIndex="17">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="firstnameRequired" layoutX="79.0" layoutY="15.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="lastRequired" layoutX="76.0" layoutY="10.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+               <children>
+                  <Label fx:id="clubMemberIdRequired" layoutX="109.0" layoutY="8.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
          </children>
       </GridPane>
+      <Label alignment="CENTER" layoutX="26.0" layoutY="25.0" prefHeight="50.0" prefWidth="200.0" text="Data Mapping" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="45.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the corresponding columns to start the formatting process" wrappingWidth="480.634765625" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="44.365234375" />
    </children>
 </AnchorPane>

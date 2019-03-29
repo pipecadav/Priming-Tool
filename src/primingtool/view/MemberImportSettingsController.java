@@ -34,19 +34,31 @@ public class MemberImportSettingsController extends Controller {
     private Label selectRegionLabel;
 
     @FXML
-    private Label subdomainArea;
+    private Label fileNameFieldLabel;
+
+    @FXML
+    private Label formatRequired;
+
+    @FXML
+    private Label regionRequired;
+
+    @FXML
+    private Label fileNameRequired;
 
     @FXML
     private Button nextButton;
 
     @FXML
-    private TextField subdomainField;
+    private TextField fileNameField;
+
+
 
     private final ContextMenu contextMenuFormat = new ContextMenu();
 
     private final ContextMenu contextMenuRegionLabel = new ContextMenu();
 
     private final ContextMenu contextMenuSubdomain = new ContextMenu();
+
 
     /**
      * Constructor
@@ -77,8 +89,8 @@ public class MemberImportSettingsController extends Controller {
         );
 
         InstallContextMenu(
-                "Club name or subdomain that is used in the portal URL",
-                subdomainArea,
+                "No Special Characters are Allowed (#$&%$&;,.)",
+                fileNameFieldLabel,
                 contextMenuSubdomain
         );
     }
@@ -89,17 +101,38 @@ public class MemberImportSettingsController extends Controller {
      */
     @FXML
     private void handleNextButton(){
-        getPrimingTool().showUploader();
-        MemberRulesImpl.setRegionSelected(regionSelection.getSelectionModel().getSelectedItem().toString());
-        MemberRulesImpl.setDateFormatSelected(dateTypeSelection.getSelectionModel().getSelectedItem().toString());
-        CSVHandler.setFileName(subdomainField.getText());
-        CSVHandler.setDate();
+        if(regionSelection.getSelectionModel().getSelectedIndex() == -1){
+            regionRequired.setText("*");
+
+
+        }
+        if(dateTypeSelection.getSelectionModel().getSelectedIndex() == -1){
+            formatRequired.setText("*");
+        }
+        if(!isValidInputText(fileNameField.getText())){
+            fileNameRequired.setText("*");
+            fileNameField.clear();
+        }
+        if(isValidInputText(fileNameField.getText())){
+            if(regionSelection.getSelectionModel().getSelectedIndex() != -1){
+                if(dateTypeSelection.getSelectionModel().getSelectedIndex() != -1){
+                    MemberRulesImpl.setRegionSelected(regionSelection.getSelectionModel().getSelectedItem().toString());
+                    MemberRulesImpl.setDateFormatSelected(dateTypeSelection.getSelectionModel().getSelectedItem().toString());
+                    CSVHandler.setFileName(fileNameField.getText());
+                    CSVHandler.setDate();
+                    getPrimingTool().showUploader();
+                }
+            }
+        }
+
+
+
 
         //Just for testing Purposes
-        System.out.println(MemberRulesImpl.getRegionSelected());
-        System.out.println(MemberRulesImpl.getDateFormatSelected());
-        System.out.println(CSVHandler.getFileName());
-        System.out.println(CSVHandler.getDate());
+        //System.out.println(MemberRulesImpl.getRegionSelected());
+        //System.out.println(MemberRulesImpl.getDateFormatSelected());
+        //System.out.println(CSVHandler.getFileName());
+        //System.out.println(CSVHandler.getDate());
         }
 
 
