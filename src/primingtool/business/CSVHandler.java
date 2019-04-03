@@ -1,8 +1,10 @@
 package primingtool.business;
 
+import primingtool.dao.impl.MemberList;
 import primingtool.model.Member;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -16,7 +18,7 @@ public class CSVHandler {
     private static String date;
     private static int successfulRecords;
     private static int erroredRecords;
-    private static HashMap <String, String> columnsIndex = new HashMap<String, String>();
+    private static HashMap <String, Integer> columnsIndex = new HashMap<String, Integer>();
     public static String successfulFileNamePath;
     public static String erroredFileNamePath;
 
@@ -50,9 +52,11 @@ public class CSVHandler {
      */
     public static void setOriginalColumns(){
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(CSVHandler.originalImportFile));
+            BufferedReader bufferedReader = new BufferedReader(
+                    new InputStreamReader(
+                            new FileInputStream(CSVHandler.getOriginalImportFilePath()), StandardCharsets.ISO_8859_1));
             String firstLine = bufferedReader.readLine();
-            CSVHandler.originalColumns = firstLine.split(",");
+            CSVHandler.originalColumns = firstLine.split("[,;]");
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -105,7 +109,7 @@ public class CSVHandler {
      * Retrieves a hasmap of key-values so that it's possible to follow the column order in the CSV File
      * @return
      */
-    public static HashMap<String, String> getColumnsIndex() {
+    public static HashMap<String, Integer> getColumnsIndex() {
         return columnsIndex;
     }
 
@@ -114,7 +118,7 @@ public class CSVHandler {
      * @param fieldName
      * @param fieldIndex
      */
-    public static void addValuestoConlumnIndex(String fieldName, String fieldIndex) {
+    public static void addValuestoConlumnIndex(String fieldName, Integer fieldIndex) {
         CSVHandler.columnsIndex.put(fieldName, fieldIndex);
 
     }
@@ -197,8 +201,9 @@ public class CSVHandler {
      */
     public static void createFile (String filePath, List<Member> memberList){
         try{
-            FileWriter fileWriter = new FileWriter(filePath,true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            Writer bufferedWriter = new OutputStreamWriter(
+                            new FileOutputStream(filePath),
+                    System.getProperty("file.encoding"));
             PrintWriter printWriter = new PrintWriter(bufferedWriter);
             for (int i = 0; i<memberList.size(); i++){
                 printWriter.println(memberList.get(i).toString());

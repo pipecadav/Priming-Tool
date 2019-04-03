@@ -1,6 +1,6 @@
 apellido,nombre,miembro de club,correo,cumpleaños,genero,telefono,direccion,zip,ciudad
-Abhishek,Mahapatra     ,1,abhi_nist@yahoo.com,30/06/1984,m,3166280579,Cl 107A # 7C-49,110221,BOGOTA
-Abmarie,Martinez     ,2,abmarie.martinez@ey.com,,f,0,0,110221,BOGOTA
+"Abhishek,1",Mahapatra     ,1,abhi_nist@yahoo.com,30/06/1984,m,3166280579,Cl 107A # 7C-49,110221,BOGOTA
+"Abmarie,2",Martinez     ,2,abmarie.martinez@ey.com,,f,0,0,110221,BOGOTA
 Adalucia,Bravo     ,3,aditabravo11@gmail.com,,f,3115358561,0,110221,BOGOTA
 Adelaida,Salamanca     ,4,ade_salamanca@hotmail.com,,f,3184723258,0,110221,BOGOTA
 Adrian,Roa     ,5,adrian.roa@live.com,19/09/1986,m,3152586856,cra 63 n. 5a-31,110221,BOGOTA

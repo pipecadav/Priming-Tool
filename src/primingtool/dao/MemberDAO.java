@@ -6,9 +6,8 @@ import java.util.List;
 
 public interface MemberDAO {
     void addMember(Member member);
-    Member searchMember(String emailOrId);
+    boolean isDuplicateClubMemberID(String emailOrId);
     List<Member> getMembers();
     List<Member> getErroredMembers();
-    void deleteMember(String emailOrId);
 
 }

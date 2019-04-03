@@ -2,11 +2,12 @@ package primingtool.model;
 
 /*
  * Super class that stores the object member with all the variables a member import could contain.
- * This class doesn't store any variables
+ *
  */
 
 public class Member {
 
+    private String messageResult = "";
     private String firstname = "";
     private String lastname = "";
     private String birthday = "";
@@ -21,7 +22,9 @@ public class Member {
     private String house_number_addition = "";
     private String zip = "";
     private String city = "";
+    private String member_since = "";
     private String country = "";
+    private String language = "";
     private String card_nr = "";
     private String inactive = "";
     private String notes = "";
@@ -65,7 +68,8 @@ public class Member {
      * @param bank_account_number
      * @param bank_account_owner
      */
-    public Member(String firstname, String lastname, String birthday, String gender, String club_member_id, String email, String phone, String mobile, String street, String street_extra, String house_number, String house_number_addition, String zip, String city, String country, String card_nr, String inactive, String notes, String unsubscribe, String coach_id, String tags, String bank_account_number, String bank_account_owner) {
+    public Member(String messageResult, String firstname, String lastname, String birthday, String gender, String club_member_id, String email, String phone, String mobile, String street, String street_extra, String house_number, String house_number_addition, String zip, String city, String member_since, String country, String language, String card_nr, String inactive, String notes, String unsubscribe, String coach_id, String tags, String bank_account_number, String bank_account_owner) {
+        this.messageResult = messageResult;
         this.firstname = firstname;
         this.lastname = lastname;
         this.birthday = birthday;
@@ -80,7 +84,9 @@ public class Member {
         this.house_number_addition = house_number_addition;
         this.zip = zip;
         this.city = city;
+        this.member_since = member_since;
         this.country = country;
+        this.language = language;
         this.card_nr = card_nr;
         this.inactive = inactive;
         this.notes = notes;
@@ -275,6 +281,30 @@ public class Member {
         this.bank_account_owner = bank_account_owner;
     }
 
+    public String getMessageResult() {
+        return messageResult;
+    }
+
+    public void setMessageResult(String messageResult) {
+        this.messageResult = messageResult;
+    }
+
+    public String getMember_since() {
+        return member_since;
+    }
+
+    public void setMember_since(String member_since) {
+        this.member_since = member_since;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
     /**
      * Converts the object Data to a String
      * @return
@@ -282,7 +312,8 @@ public class Member {
     @Override
     public String toString(){
             return
-                    this.getFirstname() + "," +
+                    this.getMessageResult() + "," +
+                            this.getFirstname() + "," +
                             this.getLastname() + "," +
                             this.getBirthday() + "," +
                             this.getGender() + "," +
@@ -296,7 +327,9 @@ public class Member {
                             this.getHouse_number_addition() + "," +
                             this.getZip() + "," +
                             this.getCity() + "," +
+                            this.getMember_since() + "," +
                             this.getCountry() + "," +
+                            this.getLanguage() + "," +
                             this.getCard_nr() + "," +
                             this.getInactive() + "," +
                             this.getNotes() + "," +

@@ -8,8 +8,7 @@
 package primingtool;
 
 import javafx.scene.control.ScrollPane;
-import primingtool.view.*;
-import primingtool.view.FileExplorerController;
+import primingtool.control.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -46,6 +45,7 @@ public class PrimingTool extends Application{
         this.primaryStage.setTitle("Virtuagym Import Tool");
         this.primaryStage.getIcons().add(new Image("file:src/primingtool/view/img/import_tool_logo.png"));
         initMainMenu();
+
     }
 
     /**

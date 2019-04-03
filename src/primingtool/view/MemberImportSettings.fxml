@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primingtool.view.MemberImportSettingsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="primingtool.control.MemberImportSettingsController">
    <children>
       <GridPane layoutX="200.0" layoutY="255.0" prefHeight="600.0" prefWidth="577.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
         <columnConstraints>
@@ -40,6 +40,11 @@
                         <Image url="@img/information-variant.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="208.0" layoutY="37.0" text="*" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Label fx:id="selectFormatLabel" alignment="CENTER" prefHeight="60.0" prefWidth="250.0" text="Select Date Format" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
@@ -54,6 +59,11 @@
                         <Image url="@img/information-variant.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="188.0" layoutY="37.0" text="*" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Label fx:id="selectRegionLabel" alignment="CENTER" prefHeight="60.0" prefWidth="250.0" text="Select Region" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
@@ -62,18 +72,18 @@
                </font></Label>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="formatRequired" layoutX="140.0" layoutY="39.0" textFill="RED">
+                  <Label fx:id="formatRequired" layoutY="70.0" text="Required" textFill="RED" visible="false">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font size="14.0" />
                      </font></Label>
                </children>
             </Pane>
             <JFXComboBox fx:id="dateTypeSelection" focusColor="#19232f" prefHeight="25.0" prefWidth="140.0" style="-fx-font-size: 14px; -fx-selection-bar: #257eff;" unFocusColor="#283643" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label fx:id="regionRequired" layoutX="142.0" layoutY="41.0" textFill="RED">
+                  <Label fx:id="regionRequired" layoutY="69.0" text="Required" textFill="RED" visible="false">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font size="14.0" />
                      </font></Label>
                </children>
             </Pane>
@@ -85,9 +95,9 @@
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <Label fx:id="fileNameRequired" layoutX="140.0" layoutY="39.0" textFill="RED">
+                  <Label fx:id="fileNameRequired" layoutY="69.0" text="Rquired. (#$%&amp;/%.,) not allowed" textFill="RED" visible="false">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font size="14.0" />
                      </font></Label>
                </children>
             </Pane>
@@ -98,6 +108,11 @@
                         <Image url="@img/information-variant.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="201.0" layoutY="37.0" text="*" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Label fx:id="fileNameFieldLabel" alignment="CENTER" prefHeight="60.0" prefWidth="250.0" text="Output File Name" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
