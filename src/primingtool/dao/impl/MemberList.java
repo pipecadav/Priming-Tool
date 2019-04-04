@@ -30,7 +30,7 @@ public class MemberList implements MemberDAO {
                             new FileInputStream(CSVHandler.getOriginalImportFilePath()), System.getProperty("file.encoding")));
             String memberRecord = bufferedReader.readLine();
             while((memberRecord = bufferedReader.readLine()) != null){
-                if(!memberRecord.equals("") && !memberRecord.replaceAll("[,;]","").trim().isEmpty()){
+                if(!memberRecord.equals("") && !memberRecord.replaceAll("[,;\"]","").trim().isEmpty()){
                     addMember(convertRecordtoObject(memberRecord));
                 }
             }
@@ -51,11 +51,15 @@ public class MemberList implements MemberDAO {
                     member.setMessageResult(member.getMessageResult()+"Club Member ID is already in Use. ");
                 }
                 if(isDuplicateEmail(member.getEmail())){
-                    member.setMessageResult(member.getMessageResult() + "Email is already in use");
+                    member.setMessageResult(member.getMessageResult() + "Email is already in use. ");
                 }
                 erroredMembersDatabase.add(member);
             }else{
-                memberDatabase.add(member);
+                if(member.getMessageResult().equals("") || member.getMessageResult().trim().isEmpty()){
+                    memberDatabase.add(member);
+                }else{
+                    erroredMembersDatabase.add(member);
+                }
             }
         }
     }
@@ -95,7 +99,7 @@ public class MemberList implements MemberDAO {
     }
 
     private Member convertRecordtoObject(String memberRecord){
-
+        memberRecord = memberRecord+"1";
         String [] memberFields = memberRecord.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)|;(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
 
         for(int i=0; i<memberFields.length; i++){
@@ -186,6 +190,23 @@ public class MemberList implements MemberDAO {
                 if(CSVHandler.getColumnsIndex().get("us_bank_account_place") != -1){
                     usMember.setUs_bank_account_place(memberFields[CSVHandler.getColumnsIndex().get("us_bank_account_place")]);
                 }
+
+                validateFields(usMember);
+
+                String bankAccountNumber = PrimingRules.validateAccountNumber(usMember.getBank_account_number());
+                if(bankAccountNumber.equals("Account Number must have between 4 and 18 digits.")){
+                    usMember.setMessageResult(usMember.getMessageResult()+bankAccountNumber);
+                }else{
+                    usMember.setBank_account_number(bankAccountNumber);
+                }
+
+                String bankRouting = PrimingRules.validateRoutingNumber(usMember.getUs_bank_routing_number());
+                if(bankRouting.equals("Routing Number is invalid.")){
+                    usMember.setMessageResult(usMember.getMessageResult()+bankRouting);
+                }else {
+                    usMember.setUs_bank_routing_number(bankRouting);
+                }
+
                 return usMember;
             case "Europe":
                 EuropeMember europeMember = new EuropeMember();
@@ -267,6 +288,9 @@ public class MemberList implements MemberDAO {
                 if(CSVHandler.getColumnsIndex().get("bank_bic_code") != -1){
                     europeMember.setBank_bic_code(memberFields[CSVHandler.getColumnsIndex().get("bank_code")]);
                 }
+
+                validateFields(europeMember);
+
                 return europeMember;
             case "Other":
                 Member otherMember = new Member();
@@ -342,13 +366,62 @@ public class MemberList implements MemberDAO {
                 if(CSVHandler.getColumnsIndex().get("bank_account_owner") != -1){
                     otherMember.setBank_account_owner(memberFields[CSVHandler.getColumnsIndex().get("bank_account_owner")]);
                 }
+
+                validateFields(otherMember);
+
                 return otherMember;
         }
         return null;
     }
 
     public void validateFields(Member member){
-        //if(member.getFirstname().equals(""))
+        if(member.getFirstname().equals("") || member.getFirstname().trim().isEmpty()){
+            member.setMessageResult(member.getMessageResult()+ "Firstname is Required");
+        }
+        if(member.getLastname().equals("") || member.getLastname().trim().isEmpty()){
+            member.setMessageResult(member.getMessageResult()+ "Lastname is Required");
+        }
+        if(member.getClub_member_id().equals("") || member.getClub_member_id().trim().isEmpty()){
+            member.setMessageResult(member.getMessageResult()+ "Club member ID is Required");
+        }
+
+        String email = PrimingRules.fixEmailFormat(member.getEmail());
+        if(email.equals("E-mail has invalid Format.")){
+            member.setMessageResult(member.getMessageResult()+email);
+        }else{
+            member.setEmail(email);
+        }
+
+        String birthday = PrimingRules.checkDateFormat(member.getBirthday());
+        if(birthday.equals("value couldn't be converted.")){
+            member.setMessageResult(member.getMessageResult()+" Birthday "+birthday);
+        }else{
+            member.setBirthday(birthday);
+        }
+
+        String memberSince = PrimingRules.checkDateFormat(member.getMember_since());
+        if(memberSince.equals("value couldn't be converted.")){
+            member.setMessageResult(member.getMessageResult()+ " Member Since "+memberSince);
+        }else{
+            member.setMember_since(memberSince);
+        }
+
+        String unsubscribe = PrimingRules.checkDateFormat(member.getUnsubscribe());
+        if(unsubscribe.equals("value couldn't be converted.")){
+            member.setMessageResult(member.getMessageResult()+ "Unsubscribe Date "+unsubscribe);
+        }else {
+            member.setUnsubscribe(unsubscribe);
+        }
+
+        member.setGender(PrimingRules.convertGenderToLowCase(member.getGender()));
+
+        String inactive = PrimingRules.isActiveClient(member.getInactive());
+        if(inactive.equals("Please Indicate if client is active.")){
+            member.setMessageResult(member.getMessageResult()+inactive);
+        }else{
+            member.setInactive(inactive);
+        }
+
     }
 
     public void createHeaders(){

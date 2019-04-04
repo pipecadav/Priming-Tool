@@ -25,6 +25,9 @@ public class PrimingRules {
      */
     public static String fixEmailFormat(String email) {
         if(email.equals("") || email.trim().isEmpty()){
+            if(email.equals("N/A") || email.equals("#N/A")){
+                return "";
+            }
             return "";
         }else{
             String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
@@ -37,7 +40,7 @@ public class PrimingRules {
             if(pattern.matcher(fixedEmail).matches()){
                 return fixedEmail;
             }else{
-                return "E-mail has invalid Format";
+                return "E-mail has invalid Format.";
             }
         }
     }
@@ -49,64 +52,67 @@ public class PrimingRules {
      */
     public static String checkDateFormat(String date) {
         if(date.equals("") || date.trim().isEmpty()){
+            if(date.equals("N/A") || date.equals("#N/A")){
+                return "";
+            }
             return "";
         }else{
-            switch(PrimingRules.dateFormatSelected){
+            switch(PrimingRules.getDateFormatSelected()){
                 case "d-m-yyyy":
                     try{
                         date = date.replaceAll("[/.]","-");
                         return convertDate("d-M-yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
                 case "m-d-yyyy":
                     try{
                         date = date.replaceAll("[/.]","-");
                         return convertDate("M-d-yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
                 case "dd-mm-yyyy":
                     try{
                         date = date.replaceAll("[/.]","-");
                         return convertDate("dd-MM-yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
                 case "mm-dd-yyyy":
                     try{
                         date = date.replaceAll("[/.]","-");
                         return convertDate("MM-dd-yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
                 case "d/m/yyyy":
                     try{
                         date = date.replaceAll("[-.]","/");
                         return convertDate("d/M/yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
                 case "m/d/yyyy":
                     try{
                         date = date.replaceAll("[-.]","/");
                         return convertDate("M/d/yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
                 case "dd/mm/yyyy":
                     try{
                         date = date.replaceAll("[-.]","/");
                         return convertDate("dd/MM/yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
                 case "mm/dd/yyy":
                     try{
                         date = date.replaceAll("[-.]","/");
                         return convertDate("MM/dd/yyyy", date);
                     } catch (ParseException dateException){
-                        return "Date couldn't be converted";
+                        return "value couldn't be converted.";
                     }
             }
         }
@@ -148,7 +154,7 @@ public class PrimingRules {
      */
     public static String isActiveClient(String active){
         if(active.equals("") || active.trim().isEmpty()){
-            return "Please Indicate if client is active";
+            return "Please Indicate if client is active.";
         }else {
             switch (active.trim().toLowerCase()){
                 case "yes":
@@ -164,6 +170,8 @@ public class PrimingRules {
                 case "sim":
                     return "0";
                 case "sí":
+                    return "0";
+                case "0":
                     return "0";
                 default:
                     return "1";
@@ -185,7 +193,7 @@ public class PrimingRules {
             if((routingNumber.trim().length() == 9) && (routingNumber.trim().matches("^[0-9]*$")) ){
                 return routingNumber.trim();
             }else{
-                return "Routing Number is invalid";
+                return "Routing Number is invalid.";
             }
         }
     }
@@ -203,7 +211,7 @@ public class PrimingRules {
             if((accountNumber.trim().length() >= 4) && (accountNumber.trim().length() <= 18)){
                 return accountNumber.trim();
             }else {
-                return "Account Number must have between 4 and 18 digits";
+                return "Account Number must have between 4 and 18 digits.";
             }
         }
     }
