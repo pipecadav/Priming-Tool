@@ -14,12 +14,14 @@ public class CSVHandler {
     private static String [] originalColumns;
     private static String fileName;
     private static String date;
-    private static int successfulRecords;
-    private static int erroredRecords;
-    private static HashMap <String, String> columnsIndex = new HashMap<String, String>();
-    public static String successfulFileNamePath;
-    public static String erroredFileNamePath;
 
+    private static int amountOfSuccessfulRecords;
+    private static int amountOfFailedRecords;
+
+    private static HashMap <String, String> columnIndex = new HashMap<>();
+
+    public static String successfulRecordFileNamePath;
+    public static String failedRecordFileNamePath;
 
     /**
      *
@@ -105,17 +107,18 @@ public class CSVHandler {
      * Retrieves a hasmap of key-values so that it's possible to follow the column order in the CSV File
      * @return
      */
-    public static HashMap<String, String> getColumnsIndex() {
-        return columnsIndex;
+    // TODO @pipe Not often the possessive is used in naming of things.
+    public static HashMap<String, String> getColumnIndex() {
+        return columnIndex;
     }
 
     /**
      * Adds the key-values to the hashmap for future reference when creating the Member Objects.
-     * @param fieldName
-     * @param fieldIndex
+     * @param columnName
+     * @param columnIndex
      */
-    public static void addValuestoConlumnIndex(String fieldName, String fieldIndex) {
-        CSVHandler.columnsIndex.put(fieldName, fieldIndex);
+    public static void addValueToColumn(String columnName, String columnIndex) {
+        CSVHandler.columnIndex.put(columnName, columnIndex);
 
     }
 
@@ -137,31 +140,31 @@ public class CSVHandler {
     }
 
     public static int getSuccessfulRecords() {
-        return successfulRecords;
+        return amountOfSuccessfulRecords;
     }
 
     /**
      *
-     * @param successfulRecords
+     * @param amountOfRecords
      */
-    public static void setSuccessfulRecords(int successfulRecords) {
-        CSVHandler.successfulRecords = successfulRecords;
+    public static void setSuccessfulRecords(int amountOfRecords) {
+        CSVHandler.amountOfSuccessfulRecords = amountOfRecords;
     }
 
     /**
      *
      * @return
      */
-    public static int getErroredRecords() {
-        return erroredRecords;
+    public static int getFailedRecords() {
+        return amountOfFailedRecords;
     }
 
     /**
      *
-     * @param erroredRecords
+     * @param failedRecords
      */
-    public static void setErroredRecords(int erroredRecords) {
-        CSVHandler.erroredRecords = erroredRecords;
+    public static void getFailedRecords(int failedRecords) {
+        CSVHandler.amountOfFailedRecords = failedRecords;
     }
 
     /**
@@ -186,8 +189,8 @@ public class CSVHandler {
      * @param fileName
      */
     public static void setOutputFilenames(String date, String fileName){
-        CSVHandler.erroredFileNamePath = "Errored Imports/"+"Errored"+date+fileName+".csv";
-        CSVHandler.successfulFileNamePath = "Successful Imports/"+date+fileName+".csv";
+        CSVHandler.failedRecordFileNamePath = "Errored Imports/"+"Errored"+date+fileName+".csv";
+        CSVHandler.successfulRecordFileNamePath = "Successful Imports/"+date+fileName+".csv";
     }
 
     /**
@@ -208,6 +211,14 @@ public class CSVHandler {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static boolean hasValueFor(String columnName) {
+        return !getColumnIndex().get(columnName).equals("-1");
+    }
+
+    public static int getIndexFor(String columnName) {
+        return Integer.parseInt(CSVHandler.getColumnIndex().get(columnName));
     }
 
 }

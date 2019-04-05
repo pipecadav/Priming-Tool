@@ -8,6 +8,4 @@ public class EuropeMemberList extends MemberList {
 
     private final static List<EuropeMember> europeMembers = new ArrayList<EuropeMember>();
 
-
-
 }

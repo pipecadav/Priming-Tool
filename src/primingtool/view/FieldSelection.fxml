@@ -189,31 +189,31 @@
                </font>
             </Label>
             <JFXComboBox fx:id="inactive" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="16" />
-            <JFXComboBox fx:id="unsubscribe" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="18" />
+            <JFXComboBox fx:id="unsubscribeDate" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="18" />
             <JFXComboBox fx:id="tags" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="20" />
             <JFXComboBox fx:id="us_bank_account_place" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="27" />
             <JFXComboBox fx:id="us_bank_account_type" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="26" />
             <JFXComboBox fx:id="us_bank_routing_number" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="25" />
             <JFXComboBox fx:id="bank_sort_code" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="24" />
-            <JFXComboBox fx:id="coach_id" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="19" />
+            <JFXComboBox fx:id="coachId" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="19" />
             <JFXComboBox fx:id="bank_bic_code" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="23" />
-            <JFXComboBox fx:id="bank_account_owner" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="22" />
-            <JFXComboBox fx:id="bank_account_number" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="21" />
-            <JFXComboBox fx:id="house_number" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" />
-            <JFXComboBox fx:id="house_number_addition" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" />
+            <JFXComboBox fx:id="bankAccountOwner" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="22" />
+            <JFXComboBox fx:id="bankAccountNumber" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="21" />
+            <JFXComboBox fx:id="houseNumber" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" />
+            <JFXComboBox fx:id="houseNumberAddition" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" />
             <JFXComboBox fx:id="zip" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="12" />
             <JFXComboBox fx:id="city" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="13" />
-            <JFXComboBox fx:id="card_nr" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="15" />
-            <JFXComboBox fx:id="street_extra" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
+            <JFXComboBox fx:id="cardNumber" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="15" />
+            <JFXComboBox fx:id="streetExtra" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
             <JFXComboBox fx:id="street" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" />
             <JFXComboBox fx:id="mobile" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
             <JFXComboBox fx:id="phone" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
             <JFXComboBox fx:id="email" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
-            <JFXComboBox fx:id="club_member_id" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+            <JFXComboBox fx:id="clubMemberId" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
             <JFXComboBox fx:id="gender" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
             <JFXComboBox fx:id="birthday" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
-            <JFXComboBox fx:id="lastname" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
-            <JFXComboBox fx:id="firstname" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" />
+            <JFXComboBox fx:id="lastName" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="firstName" focusColor="#19232f" unFocusColor="#283643" GridPane.columnIndex="2" GridPane.halignment="LEFT" />
             <ImageView GridPane.columnIndex="1" GridPane.rowIndex="7">
                <image>
                   <Image url="@img/arrow-right-bold.png" />

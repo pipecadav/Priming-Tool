@@ -26,7 +26,6 @@ public class PrimingOverviewController extends Controller {
     @FXML
     private Label erroredRecords;
 
-
     /**
      * Constructor
      */
@@ -38,17 +37,17 @@ public class PrimingOverviewController extends Controller {
      * when the FXML file is loaded
      */
     @FXML
-    private void initialize(){
+    private void initialize() {
         successfulRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()));
-        erroredRecords.setText(Integer.toString(CSVHandler.getErroredRecords()));
-        processedRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords()+CSVHandler.getErroredRecords()));
+        erroredRecords.setText(Integer.toString(CSVHandler.getFailedRecords()));
+        processedRecords.setText(Integer.toString(CSVHandler.getSuccessfulRecords() + CSVHandler.getFailedRecords()));
     }
 
     /**
      * Opens the location of where the primed file
      */
     @FXML
-    private void handleOpenPrimedFile(){
+    private void handleOpenPrimedFile() {
         openDesktop("Successful Imports");
     }
 
@@ -56,21 +55,22 @@ public class PrimingOverviewController extends Controller {
      * Opens the location of the errored File
      */
     @FXML
-    private void handleOpenErroredFile(){
+    private void handleOpenErroredFile() {
         openDesktop("Errored Imports");
-
     }
 
     /**
      * Initializes destop folder
+     *
      * @param filepath
      */
-    private void openDesktop(String filepath){
+    private void openDesktop(String filepath) {
         File file = new File(filepath);
         Desktop desktop = Desktop.getDesktop();
-        try{
+
+        try {
             desktop.open(file);
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

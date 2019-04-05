@@ -11,12 +11,12 @@ public class MainMenuController {
     //Reference to the primingtool.PrimingTool Class
     private PrimingTool primingTool;
 
-
     /**
      * Is called by the main application to give a reference back to itself.
+     *
      * @param primingTool Main Application
      */
-    public void setController (PrimingTool primingTool){
+    public void setController(PrimingTool primingTool) {
         this.primingTool = primingTool;
     }
 
@@ -24,7 +24,7 @@ public class MainMenuController {
      * Function that displays the member import settings after clicking on the Member Import Button
      */
     @FXML
-    private void handleMemberImportButton(){
+    private void handleMemberImportButton() {
         primingTool.showMemberImportSettings();
     }
 
@@ -32,7 +32,7 @@ public class MainMenuController {
      * Function that displays the member import settings after clicking on the Member Import Button
      */
     @FXML
-    private void handleMembershipImportButton(){
+    private void handleMembershipImportButton() {
         primingTool.showMembershipImportSettings();
     }
 
@@ -40,7 +40,7 @@ public class MainMenuController {
      * Function that displays the member import settings after clicking on the Member Import Button
      */
     @FXML
-    private void handleContractsImportButton(){
+    private void handleContractsImportButton() {
         primingTool.showContractImportSettings();
     }
 
@@ -48,7 +48,7 @@ public class MainMenuController {
      * Function that displays the member import settings after clicking on the Member Import Button
      */
     @FXML
-    private void handleCreditsImportButton(){
+    private void handleCreditsImportButton() {
         primingTool.showCreditImportSettings();
     }
 
@@ -56,9 +56,8 @@ public class MainMenuController {
      * Function that displays the member import settings after clicking on the Member Import Button
      */
     @FXML
-    private void handleProgressImportButton(){
+    private void handleProgressImportButton() {
         primingTool.showProgressImportSettings();
-
     }
 
     /**
@@ -67,20 +66,14 @@ public class MainMenuController {
     @FXML
     private void handleHelpButton() throws IOException, URISyntaxException {
         primingTool.showHelp();
-
     }
 
     /**
      * Exits Application after clicking the button Exit
      */
     @FXML
-    private void handleExit(){
+    private void handleExit() {
         System.exit(0);
     }
-
-
-
-
-
 
 }

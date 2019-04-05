@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface MemberDAO {
     void addMember(Member member);
-    Member searchMember(String emailOrId);
+    Member findMemberByEmailOrId(String emailOrId);
     List<Member> getMembers();
-    List<Member> getErroredMembers();
+    List<Member> getFailedMembers();
     void deleteMember(String emailOrId);
 
 }

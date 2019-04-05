@@ -19,6 +19,6 @@ public class StartPrimingController extends Controller {
     private void handleStartButton(){
         CSVHandler.setOriginalColumns();
         getPrimingTool().showFieldSelectionPage();
-
     }
+
 }

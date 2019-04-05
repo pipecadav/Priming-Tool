@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 
 public class ProcessingPageController extends Controller {
 
-
     /**
      * Constructor
      */

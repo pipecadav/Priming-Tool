@@ -108,19 +108,13 @@ public class FieldSelectionController extends Controller {
     @FXML
     private Label clubMemberIdRequired;
 
-
-
-
-
-
-
     /**
      * Constructor
      */
     public FieldSelectionController() {
     }
 
-    public void initialize(){
+    public void initialize() {
         firstname.setItems(columns);
         lastname.setItems(columns);
         birthday.setItems(columns);
@@ -149,75 +143,82 @@ public class FieldSelectionController extends Controller {
         us_bank_routing_number.setItems(columns);
         us_bank_account_type.setItems(columns);
         us_bank_account_place.setItems(columns);
-
-
     }
 
-    private void setColumnOrder(){
-        CSVHandler.addValuestoConlumnIndex("firstname", Integer.toString(firstname.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("lastname", Integer.toString(lastname.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("birthday", Integer.toString(birthday.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("gender", Integer.toString(gender.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("club_member_id", Integer.toString(club_member_id.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("email", Integer.toString(email.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("phone", Integer.toString(phone.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("mobile", Integer.toString(mobile.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("street", Integer.toString(street.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("street_extra", Integer.toString(street_extra.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("house_number", Integer.toString(house_number.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("house_number_addition", Integer.toString(house_number_addition.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("zip", Integer.toString(zip.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("city", Integer.toString(city.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("country", Integer.toString(country.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("card_nr", Integer.toString(card_nr.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("inactive", Integer.toString(inactive.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("notes", Integer.toString(notes.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("unsubscribe", Integer.toString(unsubscribe.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("coach_id", Integer.toString(coach_id.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("tags", Integer.toString(tags.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("bank_account_number", Integer.toString(bank_account_number.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("bank_account_owner", Integer.toString(bank_account_owner.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("bank_bic_code", Integer.toString(bank_bic_code.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("bank_sort_code", Integer.toString(bank_sort_code.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("us_bank_routing_number", Integer.toString(us_bank_routing_number.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("us_bank_account_type", Integer.toString(us_bank_account_type.getSelectionModel().getSelectedIndex()));
-        CSVHandler.addValuestoConlumnIndex("us_bank_account_place", Integer.toString(us_bank_account_place.getSelectionModel().getSelectedIndex()));
+    // TODO @pipe how does this work? Is there always one CSV loaded in memory and values are set to those?
+    private void setColumnOrder() {
+        CSVHandler.addValueToColumn("firstname", getColumnIndex(firstname));
+        CSVHandler.addValueToColumn("lastname", getColumnIndex(lastname));
+        CSVHandler.addValueToColumn("birthday", getColumnIndex(birthday));
+        CSVHandler.addValueToColumn("gender", getColumnIndex(gender));
+        CSVHandler.addValueToColumn("club_member_id", getColumnIndex(club_member_id));
+        CSVHandler.addValueToColumn("email", getColumnIndex(email));
+        CSVHandler.addValueToColumn("phone", getColumnIndex(phone));
+        CSVHandler.addValueToColumn("mobile", getColumnIndex(mobile));
+        CSVHandler.addValueToColumn("street", getColumnIndex(street));
+        CSVHandler.addValueToColumn("street_extra", getColumnIndex(street_extra));
+        CSVHandler.addValueToColumn("house_number", getColumnIndex(house_number));
+        CSVHandler.addValueToColumn("house_number_addition", getColumnIndex(house_number_addition));
+        CSVHandler.addValueToColumn("zip", getColumnIndex(zip));
+        CSVHandler.addValueToColumn("city", getColumnIndex(city));
+        CSVHandler.addValueToColumn("country", getColumnIndex(country));
+        CSVHandler.addValueToColumn("card_nr", getColumnIndex(card_nr));
+        CSVHandler.addValueToColumn("inactive", getColumnIndex(inactive));
+        CSVHandler.addValueToColumn("notes", getColumnIndex(notes));
+        CSVHandler.addValueToColumn("unsubscribe", getColumnIndex(unsubscribe));
+        CSVHandler.addValueToColumn("coach_id", getColumnIndex(coach_id));
+        CSVHandler.addValueToColumn("tags", getColumnIndex(tags));
+        CSVHandler.addValueToColumn("bank_account_number", getColumnIndex(bank_account_number));
+        CSVHandler.addValueToColumn("bank_account_owner", getColumnIndex(bank_account_owner));
+        CSVHandler.addValueToColumn("bank_bic_code", getColumnIndex(bank_bic_code));
+        CSVHandler.addValueToColumn("bank_sort_code", getColumnIndex(bank_sort_code));
+        CSVHandler.addValueToColumn("us_bank_routing_number", getColumnIndex(us_bank_routing_number));
+        CSVHandler.addValueToColumn("us_bank_account_type", getColumnIndex(us_bank_account_type));
+        CSVHandler.addValueToColumn("us_bank_account_place", getColumnIndex(us_bank_account_place));
+    }
 
-
-
+    private String getColumnIndex(JFXComboBox<String> field) {
+        return Integer.toString(field.getSelectionModel().getSelectedIndex());
     }
 
     @FXML
-    private void handleDataMappingButton(){
-        if(firstname.getSelectionModel().getSelectedIndex() == -1){
+    private void handleDataMappingButton() {
+        if (firstname.getSelectionModel().getSelectedIndex() == -1) {
             firstnameRequired.setText("*");
         }
-        if(lastname.getSelectionModel().getSelectedIndex() == -1){
+        if (lastname.getSelectionModel().getSelectedIndex() == -1) {
             lastRequired.setText("*");
         }
-        if(club_member_id.getSelectionModel().getSelectedIndex() == -1){
+        if (club_member_id.getSelectionModel().getSelectedIndex() == -1) {
             clubMemberIdRequired.setText("*");
         }
 
-        if(firstname.getSelectionModel().getSelectedIndex() != -1){
-            if(lastname.getSelectionModel().getSelectedIndex() != -1){
-                if(club_member_id.getSelectionModel().getSelectedIndex() != -1){
+        // TODO @pipe I'm sure you can make this little if-pyramid a bit nicer ;)
+        if (firstname.getSelectionModel().getSelectedIndex() != -1) {
+
+            if (lastname.getSelectionModel().getSelectedIndex() != -1) {
+
+                if (club_member_id.getSelectionModel().getSelectedIndex() != -1) {
                     setColumnOrder();
+
                     memberList.createHeaders();
                     memberList.readFileAndCreateMembers();
-                    CSVHandler.setOutputFilenames(CSVHandler.getDate(),CSVHandler.getFileName());
+
+                    CSVHandler.setOutputFilenames(CSVHandler.getDate(), CSVHandler.getFileName());
                     CSVHandler.createFileDirectory();
-                    CSVHandler.createFile(CSVHandler.successfulFileNamePath, memberList.getMembers());
-                    CSVHandler.createFile(CSVHandler.erroredFileNamePath, memberList.getErroredMembers());
+                    CSVHandler.createFile(CSVHandler.successfulRecordFileNamePath, memberList.getMembers());
+                    CSVHandler.createFile(CSVHandler.failedRecordFileNamePath, memberList.getFailedMembers());
                     CSVHandler.setSuccessfulRecords(memberList.getMembers().size());
-                    CSVHandler.setErroredRecords(memberList.getErroredMembers().size());
+                    CSVHandler.getFailedRecords(memberList.getFailedMembers().size());
+
                     getPrimingTool().showOverviewPage();
 
                 }
-                }
+
             }
+
         }
 
-
+    }
 
 }

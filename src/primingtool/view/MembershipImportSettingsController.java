@@ -7,4 +7,5 @@ public class MembershipImportSettingsController extends Controller {
      */
     public MembershipImportSettingsController() {
     }
+
 }

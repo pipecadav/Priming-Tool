@@ -20,7 +20,6 @@ import primingtool.business.impl.MemberRulesImpl;
 
 public class MemberImportSettingsController extends Controller {
 
-
     @FXML
     private JFXComboBox<String> dateTypeSelection = new JFXComboBox<String>();
 
@@ -51,20 +50,16 @@ public class MemberImportSettingsController extends Controller {
     @FXML
     private TextField fileNameField;
 
-
-
     private final ContextMenu contextMenuFormat = new ContextMenu();
 
     private final ContextMenu contextMenuRegionLabel = new ContextMenu();
 
     private final ContextMenu contextMenuSubdomain = new ContextMenu();
 
-
     /**
      * Constructor
      */
     public MemberImportSettingsController() {
-
 
     }
 
@@ -73,69 +68,68 @@ public class MemberImportSettingsController extends Controller {
      * before starting the import process
      */
     @FXML
-    private void  initialize(){
+    private void initialize() {
         dateTypeSelection.setItems(dateFormats);
         regionSelection.setItems(regions);
-        InstallContextMenu(
+
+        installContextMenu(
                 "Date format that was used in the original Import File",
                 selectFormatLabel,
                 contextMenuFormat
         );
 
-        InstallContextMenu(
+        installContextMenu(
                 "Import format that was used depending on the region/market of the client",
                 selectRegionLabel,
                 contextMenuRegionLabel
         );
 
-        InstallContextMenu(
+        installContextMenu(
                 "No Special Characters are Allowed (#$&%$&;,.)",
                 fileNameFieldLabel,
                 contextMenuSubdomain
         );
     }
 
-
     /**
      * Takes the user to the next page and stores the Date Format and Region in the Member Rules*
      */
     @FXML
-    private void handleNextButton(){
-        if(regionSelection.getSelectionModel().getSelectedIndex() == -1){
+    private void handleNextButton() {
+        if (regionSelection.getSelectionModel().getSelectedIndex() == -1) {
             regionRequired.setText("*");
-
-
         }
-        if(dateTypeSelection.getSelectionModel().getSelectedIndex() == -1){
+
+        if (dateTypeSelection.getSelectionModel().getSelectedIndex() == -1) {
             formatRequired.setText("*");
         }
-        if(!isValidInputText(fileNameField.getText())){
+
+        if (!isValidInputText(fileNameField.getText())) {
             fileNameRequired.setText("*");
             fileNameField.clear();
         }
-        if(isValidInputText(fileNameField.getText())){
-            if(regionSelection.getSelectionModel().getSelectedIndex() != -1){
-                if(dateTypeSelection.getSelectionModel().getSelectedIndex() != -1){
+
+        if (isValidInputText(fileNameField.getText())) {
+
+            if (regionSelection.getSelectionModel().getSelectedIndex() != -1) {
+
+                if (dateTypeSelection.getSelectionModel().getSelectedIndex() != -1) {
                     MemberRulesImpl.setRegionSelected(regionSelection.getSelectionModel().getSelectedItem().toString());
                     MemberRulesImpl.setDateFormatSelected(dateTypeSelection.getSelectionModel().getSelectedItem().toString());
                     CSVHandler.setFileName(fileNameField.getText());
                     CSVHandler.setDate();
                     getPrimingTool().showUploader();
                 }
+
             }
+
         }
-
-
-
 
         //Just for testing Purposes
         //System.out.println(MemberRulesImpl.getRegionSelected());
         //System.out.println(MemberRulesImpl.getDateFormatSelected());
         //System.out.println(CSVHandler.getFileName());
         //System.out.println(CSVHandler.getDate());
-        }
-
-
-
+    }
 
 }

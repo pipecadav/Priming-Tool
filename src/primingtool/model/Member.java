@@ -5,31 +5,37 @@ package primingtool.model;
  * This class doesn't store any variables
  */
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
+// TODO @pipe look at the Builder pattern. That seems like a good way to
+//  handle this Member/USMember/EuropeMember abstraction as well as the ErroredMember. Because this subclassing is not so nice ;)
 public class Member {
 
-    private String firstname = "";
-    private String lastname = "";
+    private String firstName = "";
+    private String lastName = "";
     private String birthday = "";
     private String gender = "";
-    private String club_member_id = "";
+    private String clubMemberId = "";
     private String email = "";
     private String phone = "";
     private String mobile = "";
     private String street = "";
-    private String street_extra = "";
-    private String house_number = "";
-    private String house_number_addition = "";
+    private String streetExtra = "";
+    private String houseNumber = "";
+    private String houseNumberAddition = "";
     private String zip = "";
     private String city = "";
     private String country = "";
-    private String card_nr = "";
+    private String cardNumber = "";
     private String inactive = "";
     private String notes = "";
-    private String unsubscribe = "";
-    private String coach_id = "";
+    private String unsubscribeDate = "";
+    private String coachId = "";
     private String tags = "";
-    private String bank_account_number = "";
-    private String bank_account_owner = "";
+    private String bankAccountNumber = "";
+    private String bankAccountOwner = "";
 
 
     /**
@@ -41,70 +47,70 @@ public class Member {
 
     /**
      * Constructor with all Parameters
-     * @param firstname
-     * @param lastname
+     * @param firstName
+     * @param lastName
      * @param birthday
      * @param gender
-     * @param club_member_id
+     * @param clubMemberId
      * @param email
      * @param phone
      * @param mobile
      * @param street
-     * @param street_extra
-     * @param house_number
-     * @param house_number_addition
+     * @param streetExtra
+     * @param houseNumber
+     * @param houseNumberAddition
      * @param zip
      * @param city
      * @param country
-     * @param card_nr
+     * @param cardNumber
      * @param inactive
      * @param notes
-     * @param unsubscribe
-     * @param coach_id
+     * @param unsubscribeDate
+     * @param coachId
      * @param tags
-     * @param bank_account_number
-     * @param bank_account_owner
+     * @param bankAccountNumber
+     * @param bankAccountOwner
      */
-    public Member(String firstname, String lastname, String birthday, String gender, String club_member_id, String email, String phone, String mobile, String street, String street_extra, String house_number, String house_number_addition, String zip, String city, String country, String card_nr, String inactive, String notes, String unsubscribe, String coach_id, String tags, String bank_account_number, String bank_account_owner) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public Member(String firstName, String lastName, String birthday, String gender, String clubMemberId, String email, String phone, String mobile, String street, String streetExtra, String houseNumber, String houseNumberAddition, String zip, String city, String country, String cardNumber, String inactive, String notes, String unsubscribeDate, String coachId, String tags, String bankAccountNumber, String bankAccountOwner) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthday = birthday;
         this.gender = gender;
-        this.club_member_id = club_member_id;
+        this.clubMemberId = clubMemberId;
         this.email = email;
         this.phone = phone;
         this.mobile = mobile;
         this.street = street;
-        this.street_extra = street_extra;
-        this.house_number = house_number;
-        this.house_number_addition = house_number_addition;
+        this.streetExtra = streetExtra;
+        this.houseNumber = houseNumber;
+        this.houseNumberAddition = houseNumberAddition;
         this.zip = zip;
         this.city = city;
         this.country = country;
-        this.card_nr = card_nr;
+        this.cardNumber = cardNumber;
         this.inactive = inactive;
         this.notes = notes;
-        this.unsubscribe = unsubscribe;
-        this.coach_id = coach_id;
+        this.unsubscribeDate = unsubscribeDate;
+        this.coachId = coachId;
         this.tags = tags;
-        this.bank_account_number = bank_account_number;
-        this.bank_account_owner = bank_account_owner;
+        this.bankAccountNumber = bankAccountNumber;
+        this.bankAccountOwner = bankAccountOwner;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getBirthday() {
@@ -123,12 +129,12 @@ public class Member {
         this.gender = gender;
     }
 
-    public String getClub_member_id() {
-        return club_member_id;
+    public String getClubMemberId() {
+        return clubMemberId;
     }
 
-    public void setClub_member_id(String club_member_id) {
-        this.club_member_id = club_member_id;
+    public void setClubMemberId(String clubMemberId) {
+        this.clubMemberId = clubMemberId;
     }
 
     public String getEmail() {
@@ -163,28 +169,28 @@ public class Member {
         this.street = street;
     }
 
-    public String getStreet_extra() {
-        return street_extra;
+    public String getStreetExtra() {
+        return streetExtra;
     }
 
-    public void setStreet_extra(String street_extra) {
-        this.street_extra = street_extra;
+    public void setStreetExtra(String street_extra) {
+        this.streetExtra = street_extra;
     }
 
-    public String getHouse_number() {
-        return house_number;
+    public String getHouseNumber() {
+        return houseNumber;
     }
 
-    public void setHouse_number(String house_number) {
-        this.house_number = house_number;
+    public void setHouseNumber(String houseNumber) {
+        this.houseNumber = houseNumber;
     }
 
-    public String getHouse_number_addition() {
-        return house_number_addition;
+    public String getHouseNumberAddition() {
+        return houseNumberAddition;
     }
 
-    public void setHouse_number_addition(String house_number_addition) {
-        this.house_number_addition = house_number_addition;
+    public void setHouseNumberAddition(String houseNumberAddition) {
+        this.houseNumberAddition = houseNumberAddition;
     }
 
     public String getZip() {
@@ -211,12 +217,13 @@ public class Member {
         this.country = country;
     }
 
-    public String getCard_nr() {
-        return card_nr;
+    public String getCardNumber() {
+        return cardNumber;
     }
 
-    public void setCard_nr(String card_nr) {
-        this.card_nr = card_nr;
+    // TODO @pipe keep the shortenings/acronyms to a minimum :)
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
     }
 
     public String getInactive() {
@@ -235,20 +242,20 @@ public class Member {
         this.notes = notes;
     }
 
-    public String getUnsubscribe() {
-        return unsubscribe;
+    public String getUnsubscribeDate() {
+        return unsubscribeDate;
     }
 
-    public void setUnsubscribe(String unsubscribeDate) {
-        this.unsubscribe = unsubscribeDate;
+    public void setUnsubscribeDate(String unsubscribeDate) {
+        this.unsubscribeDate = unsubscribeDate;
     }
 
-    public String getCoach_id() {
-        return coach_id;
+    public String getCoachId() {
+        return coachId;
     }
 
-    public void setCoach_id(String coach_id) {
-        this.coach_id = coach_id;
+    public void setCoachId(String coachId) {
+        this.coachId = coachId;
     }
 
     public String getTags() {
@@ -259,52 +266,46 @@ public class Member {
         this.tags = tags;
     }
 
-    public String getBank_account_number() {
-        return bank_account_number;
+    public String getBankAccountNumber() {
+        return bankAccountNumber;
     }
 
-    public void setBank_account_number(String bank_account_number) {
-        this.bank_account_number = bank_account_number;
+    public void setBankAccountNumber(String bankAccountNumber) {
+        this.bankAccountNumber = bankAccountNumber;
     }
 
-    public String getBank_account_owner() {
-        return bank_account_owner;
+    public String getBankAccountOwner() {
+        return bankAccountOwner;
     }
 
-    public void setBank_account_owner(String bank_account_owner) {
-        this.bank_account_owner = bank_account_owner;
+    public void setBankAccountOwner(String bankAccountOwner) {
+        this.bankAccountOwner = bankAccountOwner;
     }
 
+    // TODO @pipe, see if this works instead! :D
     /**
      * Converts the object Data to a String
      * @return
      */
     @Override
     public String toString(){
-            return
-                    this.getFirstname() + "," +
-                            this.getLastname() + "," +
-                            this.getBirthday() + "," +
-                            this.getGender() + "," +
-                            this.getClub_member_id() + "," +
-                            this.getEmail() + "," +
-                            this.getPhone() + "," +
-                            this.getMobile() + "," +
-                            this.getStreet() + "," +
-                            this.getStreet_extra() + "," +
-                            this.getHouse_number() + "," +
-                            this.getHouse_number_addition() + "," +
-                            this.getZip() + "," +
-                            this.getCity() + "," +
-                            this.getCountry() + "," +
-                            this.getCard_nr() + "," +
-                            this.getInactive() + "," +
-                            this.getNotes() + "," +
-                            this.getUnsubscribe() + "," +
-                            this.getCoach_id() + "," +
-                            this.getTags() + "," +
-                            this.getBank_account_number() + "," +
-                            this.getBank_account_owner();
+        List<String> fieldValues = new ArrayList<>();
+
+        try {
+
+            Class<?> thisClass = Class.forName(getClass().getName());
+
+            Field[] fields = thisClass.getDeclaredFields();
+
+            for(Field field : fields){
+                fieldValues.add(field.get(this).toString());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return String.join(",", fieldValues);
     }
 
 }
