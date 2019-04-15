@@ -57,7 +57,7 @@ public class PrimingOverviewController extends Controller {
      */
     @FXML
     private void handleOpenErroredFile(){
-        openDesktop("Errored Imports");
+        openDesktop("Failed Imports");
 
     }
 

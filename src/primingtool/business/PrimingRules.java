@@ -25,9 +25,6 @@ public class PrimingRules {
      */
     public static String fixEmailFormat(String email) {
         if(email.equals("") || email.trim().isEmpty()){
-            if(email.equals("N/A") || email.equals("#N/A")){
-                return "";
-            }
             return "";
         }else{
             String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+

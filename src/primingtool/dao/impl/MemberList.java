@@ -15,7 +15,7 @@ import java.util.List;
 public class MemberList implements MemberDAO {
 
     private final static List<Member> memberDatabase = new ArrayList<Member>();
-    private final static List<Member> erroredMembersDatabase = new ArrayList<Member>();
+    private final static List<Member> failedMembersDatabase = new ArrayList<Member>();
 
     public MemberList() {
     }
@@ -53,12 +53,12 @@ public class MemberList implements MemberDAO {
                 if(isDuplicateEmail(member.getEmail())){
                     member.setMessageResult(member.getMessageResult() + "Email is already in use. ");
                 }
-                erroredMembersDatabase.add(member);
+                failedMembersDatabase.add(member);
             }else{
                 if(member.getMessageResult().equals("") || member.getMessageResult().trim().isEmpty()){
                     memberDatabase.add(member);
                 }else{
-                    erroredMembersDatabase.add(member);
+                    failedMembersDatabase.add(member);
                 }
             }
         }
@@ -95,7 +95,7 @@ public class MemberList implements MemberDAO {
     }
 
     public List<Member> getErroredMembers() {
-        return erroredMembersDatabase;
+        return failedMembersDatabase;
     }
 
     private Member convertRecordtoObject(String memberRecord){
@@ -286,7 +286,7 @@ public class MemberList implements MemberDAO {
                     europeMember.setBank_sort_code(memberFields[CSVHandler.getColumnsIndex().get("bank_sort_code")]);
                 }
                 if(CSVHandler.getColumnsIndex().get("bank_bic_code") != -1){
-                    europeMember.setBank_bic_code(memberFields[CSVHandler.getColumnsIndex().get("bank_code")]);
+                    europeMember.setBank_bic_code(memberFields[CSVHandler.getColumnsIndex().get("bank_bic_code")]);
                 }
 
                 validateFields(europeMember);
@@ -459,7 +459,7 @@ public class MemberList implements MemberDAO {
                         "us_bank_account_place"
                         );
                 memberDatabase.add(usHeader);
-                erroredMembersDatabase.add(usHeader);
+                failedMembersDatabase.add(usHeader);
                 break;
             case "Europe":
                 EuropeMember europeHeader = new EuropeMember(
@@ -493,7 +493,7 @@ public class MemberList implements MemberDAO {
                         "bank_sort_code"
                         );
                 memberDatabase.add(europeHeader);
-                erroredMembersDatabase.add(europeHeader);
+                failedMembersDatabase.add(europeHeader);
                 break;
             case "Other":
                 Member otherMemberHeader = new Member(
@@ -524,7 +524,7 @@ public class MemberList implements MemberDAO {
                         "bank_account_number",
                         "bank_account_owner");
                 memberDatabase.add(otherMemberHeader);
-                erroredMembersDatabase.add(otherMemberHeader);
+                failedMembersDatabase.add(otherMemberHeader);
                 break;
         }
     }

@@ -122,96 +122,125 @@ public class FieldSelectionController extends Controller {
     }
 
     public void initialize(){
+
         //Pending: How can I simplify this?
         firstname.setItems(columns);
         clearComboBox(firstname);
+        firstname.getSelectionModel().select(preSelectField("firstname"));
 
         lastname.setItems(columns);
         clearComboBox(lastname);
+        lastname.getSelectionModel().select(preSelectField("lastname"));
 
         birthday.setItems(columns);
         clearComboBox(birthday);
+        birthday.getSelectionModel().select(preSelectField("birthday"));
 
         gender.setItems(columns);
         clearComboBox(gender);
+        gender.getSelectionModel().select(preSelectField("gender"));
 
         club_member_id.setItems(columns);
         clearComboBox(club_member_id);
+        club_member_id.getSelectionModel().select(preSelectField("club_member_id"));
 
         email.setItems(columns);
         clearComboBox(email);
+        email.getSelectionModel().select(preSelectField("email"));
 
         phone.setItems(columns);
         clearComboBox(phone);
+        phone.getSelectionModel().select(preSelectField("phone"));
 
         mobile.setItems(columns);
         clearComboBox(mobile);
+        mobile.getSelectionModel().select(preSelectField("mobile"));
 
         street.setItems(columns);
         clearComboBox(street);
+        street.getSelectionModel().select(preSelectField("street"));
 
         street_extra.setItems(columns);
         clearComboBox(street_extra);
 
         house_number.setItems(columns);
         clearComboBox(house_number);
+        house_number.getSelectionModel().select(preSelectField("house_number"));
 
         house_number_addition.setItems(columns);
         clearComboBox(house_number_addition);
 
         zip.setItems(columns);
         clearComboBox(zip);
+        zip.getSelectionModel().select(preSelectField("zip"));
 
         city.setItems(columns);
         clearComboBox(city);
+        city.getSelectionModel().select(preSelectField("city"));
 
         member_since.setItems(columns);
         clearComboBox(member_since);
+        member_since.getSelectionModel().select(preSelectField("member_since"));
 
         country.setItems(columns);
         clearComboBox(country);
+        country.getSelectionModel().select(preSelectField("country"));
 
         language.setItems(columns);
         clearComboBox(language);
+        language.getSelectionModel().select(preSelectField("language"));
 
         card_nr.setItems(columns);
         clearComboBox(card_nr);
+        card_nr.getSelectionModel().select(preSelectField("card_nr"));
 
         inactive.setItems(columns);
         clearComboBox(inactive);
+        inactive.getSelectionModel().select(preSelectField("inactive"));
 
         notes.setItems(columns);
         clearComboBox(notes);
+        notes.getSelectionModel().select(preSelectField("notes"));
 
         unsubscribe.setItems(columns);
         clearComboBox(unsubscribe);
+        unsubscribe.getSelectionModel().select(preSelectField("unsubscribe"));
 
         coach_id.setItems(columns);
         clearComboBox(coach_id);
+        coach_id.getSelectionModel().select(preSelectField("coach_id"));
 
         tags.setItems(columns);
         clearComboBox(tags);
+        tags.getSelectionModel().select(preSelectField("tags"));
 
         bank_account_number.setItems(columns);
         clearComboBox(bank_account_number);
+        bank_account_number.getSelectionModel().select(preSelectField("bank_account_number"));
 
         bank_account_owner.setItems(columns);
         clearComboBox(bank_account_owner);
+        bank_account_owner.getSelectionModel().select(preSelectField("bank_account_owner"));
 
         bank_bic_code.setItems(columns);
         clearComboBox(bank_bic_code);
+        bank_bic_code.getSelectionModel().select(preSelectField("bank_bic_code"));
 
         bank_sort_code.setItems(columns);
         clearComboBox(bank_sort_code);
+        bank_sort_code.getSelectionModel().select(preSelectField("bank_sort_code"));
 
         us_bank_routing_number.setItems(columns);
         clearComboBox(us_bank_routing_number);
+        us_bank_routing_number.getSelectionModel().select(preSelectField("us_bank_routing_number"));
 
         us_bank_account_type.setItems(columns);
         clearComboBox(us_bank_account_type);
+        us_bank_account_type.getSelectionModel().select(preSelectField("us_bank_account_type"));
 
         us_bank_account_place.setItems(columns);
         clearComboBox(us_bank_account_place);
+        us_bank_account_place.getSelectionModel().select(preSelectField("us_bank_account_place"));
     }
 
     private void setColumnOrder(){
@@ -257,7 +286,7 @@ public class FieldSelectionController extends Controller {
         CSVHandler.setOutputFilenames(CSVHandler.getDate(),CSVHandler.getFileName());
         CSVHandler.createFileDirectory();
         CSVHandler.createFile(CSVHandler.successfulFileNamePath, memberList.getMembers());
-        CSVHandler.createFile(CSVHandler.erroredFileNamePath, memberList.getErroredMembers());
+        CSVHandler.createFile(CSVHandler.failedFileNamePath, memberList.getErroredMembers());
         CSVHandler.setSuccessfulRecords(memberList.getMembers().size()-1);
         CSVHandler.setErroredRecords(memberList.getErroredMembers().size()-1);
         memberList.getMembers().clear();
@@ -281,6 +310,16 @@ public class FieldSelectionController extends Controller {
         }else {
             errorMessage.setVisible(true);
         }
+    }
+
+    private int preSelectField(String fieldtoMatch){
+        int index = -1;
+        for (int i = 0; i < CSVHandler.getOriginalColumns().length; i++){
+            if (CSVHandler.getOriginalColumns()[i].toLowerCase().equals(fieldtoMatch)){
+                index = i;
+            }
+        }
+        return index;
     }
 
 

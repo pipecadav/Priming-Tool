@@ -1,10 +1,8 @@
 package primingtool.business;
 
-import primingtool.dao.impl.MemberList;
 import primingtool.model.Member;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -20,7 +18,7 @@ public class CSVHandler {
     private static int erroredRecords;
     private static HashMap <String, Integer> columnsIndex = new HashMap<String, Integer>();
     public static String successfulFileNamePath;
-    public static String erroredFileNamePath;
+    public static String failedFileNamePath;
 
 
     /**
@@ -54,9 +52,9 @@ public class CSVHandler {
         try {
             BufferedReader bufferedReader = new BufferedReader(
                     new InputStreamReader(
-                            new FileInputStream(CSVHandler.getOriginalImportFilePath()), StandardCharsets.ISO_8859_1));
+                            new FileInputStream(CSVHandler.getOriginalImportFilePath()), System.getProperty("file.encoding")));
             String firstLine = bufferedReader.readLine();
-            CSVHandler.originalColumns = firstLine.split("[,;]");
+            CSVHandler.originalColumns = firstLine.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)|;(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -172,7 +170,7 @@ public class CSVHandler {
      *
      */
     public static void createFileDirectory(){
-        String erroredFolder = "Errored Imports";
+        String erroredFolder = "Failed Imports";
         File erroredDirectoy = new File(erroredFolder);
         if (!erroredDirectoy.isDirectory()) {
             erroredDirectoy.mkdir();
@@ -190,7 +188,7 @@ public class CSVHandler {
      * @param fileName
      */
     public static void setOutputFilenames(String date, String fileName){
-        CSVHandler.erroredFileNamePath = "Errored Imports/"+"Errored"+date+fileName+".csv";
+        CSVHandler.failedFileNamePath = "Failed Imports/"+"Failed"+date+fileName+".csv";
         CSVHandler.successfulFileNamePath = "Successful Imports/"+date+fileName+".csv";
     }
 

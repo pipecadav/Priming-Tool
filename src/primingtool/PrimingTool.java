@@ -41,9 +41,16 @@ public class PrimingTool extends Application{
      */
     @Override
     public void start(Stage primaryStage){
+
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Virtuagym Import Tool");
-        this.primaryStage.getIcons().add(new Image("file:src/primingtool/view/img/import_tool_logo.png"));
+        this.primaryStage.setTitle("Virtuagym Priming Tool");
+        this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/primingtool/view/img/priming_tool_16x16.png")));
+        this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/primingtool/view/img/priming_tool_32x32.png")));
+        this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/primingtool/view/img/priming_tool_64x64.png")));
+        this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/primingtool/view/img/priming_tool_128x128.png")));
+        this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/primingtool/view/img/priming_tool_256x256.png")));
+        this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/primingtool/view/img/priming_tool_512x512.png")));
+
         initMainMenu();
 
     }
@@ -228,23 +235,6 @@ public class PrimingTool extends Application{
 
             mainMenu.setCenter(scrollPaneContainer);
             FieldSelectionController controller = loader.getController();
-            controller.setController(this);
-
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    public void showProcessingPage(){
-        try{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(PrimingTool.class.getResource("view/ProcessingPage.fxml"));
-            AnchorPane processingPage = (AnchorPane) loader.load();
-
-            mainMenu.setCenter(processingPage);
-
-            ProcessingPageController controller = loader.getController();
             controller.setController(this);
 
 
